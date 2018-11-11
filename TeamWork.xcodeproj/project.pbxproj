@@ -88,6 +88,8 @@
 		AD3CEC312198BB220068E309 /* SourceryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7CEE612069676300635817 /* SourceryProtocols.swift */; };
 		AD3CEC332198BBCF0068E309 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC322198BBCF0068E309 /* Project.swift */; };
 		AD3CEC352198BBD60068E309 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC342198BBD60068E309 /* Company.swift */; };
+		AD3CEC372198C36F0068E309 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC362198C36F0068E309 /* Global.swift */; };
+		AD3CEC392198C5D30068E309 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC382198C5D30068E309 /* String+Base64.swift */; };
 		AD3F2D8C2066B60200989DC1 /* Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3F2D8B2066B60200989DC1 /* Layout.framework */; };
 		AD4FBED82063F5990073BE60 /* AutoCodable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD4FBED72063F5990073BE60 /* AutoCodable.stencil */; };
 		AD4FBEE02063F70B0073BE60 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDA2063F70B0073BE60 /* RxCocoa.framework */; };
@@ -250,6 +252,8 @@
 		AD3CEC2B2198BAA40068E309 /* ObservableType+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+Data.swift"; sourceTree = "<group>"; };
 		AD3CEC322198BBCF0068E309 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		AD3CEC342198BBD60068E309 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		AD3CEC362198C36F0068E309 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		AD3CEC382198C5D30068E309 /* String+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64.swift"; sourceTree = "<group>"; };
 		AD3F2D8B2066B60200989DC1 /* Layout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Layout.framework; path = Carthage/Build/iOS/Layout.framework; sourceTree = "<group>"; };
 		AD4FBED72063F5990073BE60 /* AutoCodable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoCodable.stencil; sourceTree = "<group>"; };
 		AD4FBED92063F70A0073BE60 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
@@ -461,6 +465,7 @@
 				BD9F9A628D33B666DB1EC7EF /* AppDelegate.swift */,
 				3AECD138792952ACA9B3BF2B /* TestsAppDelegate.swift */,
 				AD3CEB5C219865E90068E309 /* Route.swift */,
+				AD3CEC362198C36F0068E309 /* Global.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -683,6 +688,7 @@
 			children = (
 				AD3CEC2B2198BAA40068E309 /* ObservableType+Data.swift */,
 				AD3CEC2A2198BAA40068E309 /* ObservableType+DomainConvertible.swift */,
+				AD3CEC382198C5D30068E309 /* String+Base64.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1289,6 +1295,7 @@
 				AD3CEB9221986B130068E309 /* Defaults.swift in Sources */,
 				AD3CEB592198659A0068E309 /* ExternalNavigationController.swift in Sources */,
 				EF2911B840A2D94611C1C886 /* AppDelegate.swift in Sources */,
+				AD3CEC372198C36F0068E309 /* Global.swift in Sources */,
 				2F2E17FC4302A67442B3E537 /* TestsAppDelegate.swift in Sources */,
 				AD7CEE622069676300635817 /* SourceryProtocols.swift in Sources */,
 				AD3CEBA3219874650068E309 /* UIImagePickerController+Rx.swift in Sources */,
@@ -1343,6 +1350,7 @@
 				AD3CEC0D2198B5D50068E309 /* UseCaseFactory.swift in Sources */,
 				AD3CEC312198BB220068E309 /* SourceryProtocols.swift in Sources */,
 				AD3CEC282198BA920068E309 /* NetworkRequestMaker.swift in Sources */,
+				AD3CEC392198C5D30068E309 /* String+Base64.swift in Sources */,
 				AD3CEC332198BBCF0068E309 /* Project.swift in Sources */,
 				AD3CEC292198BA920068E309 /* URLSession+Rx.swift in Sources */,
 				AD3CEC0B2198B5C90068E309 /* ProjectRepository.swift in Sources */,
@@ -1566,7 +1574,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				INFOPLIST_FILE = TeamworkAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1601,7 +1609,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				INFOPLIST_FILE = TeamworkAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamwork.TeamworkAPI;
