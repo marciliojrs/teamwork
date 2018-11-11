@@ -1,1 +1,3 @@
-public protocol UseCaseFactory: class { }
+public protocol UseCaseFactory: class {
+    func makeGetAllProjects() -> GetAllProjectsUseCaseType
+}
