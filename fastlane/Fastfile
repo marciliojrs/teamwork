@@ -1,0 +1,65 @@
+fastlane_version '2.102.0'
+default_platform :ios
+
+platform :ios do
+  def check_environment
+    unless ENV.key?('CERTIFICATES_URL')
+      UI.user_error!('🚨 Environment not set. Use "--env [name]". Exiting 👋')
+    end
+  end
+
+  desc "Run unit tests for all schemes"
+  lane :tests do
+    check_environment
+    swiftlint(strict: false)
+
+    run_tests(
+      workspace: ENV['WORKSPACE_NAME'],
+      scheme: ENV['SCHEME'],
+      devices: ['iPhone SE'],
+      clean: true
+    )
+  end
+
+  ######## UTIL ########
+
+  # Create Pull Request from the current branch
+  desc "Create a pull request from the current branch"
+  lane :pr do |options|
+    ok = system("which hub > /dev/null 2>&1")
+    if ok == false
+      raise "Please install https://github.com/github/hub".yellow
+    end
+
+    ensure_git_status_clean
+    branch = git_branch
+    if branch == "master"
+      raise "You can't open a Pull Request from this branch".red
+    else
+      UI.success "it's ok, you're on branch :#{branch}".green
+      sh "git push origin #{branch}"
+    end
+
+    pr_title = prompt(text: 'Type pull request title: ')
+    sh "hub issue"
+    desc = prompt(text: 'Do you want add a description? It\'s always better :).', boolean:true)
+    prompt_text = "Type pull request description (Fixing any issues? Just write: fixed #issueNumber.): "
+    pr_description = desc ? prompt(text: prompt_text) : ""
+    sh "touch pr_file"
+    write = open('pr_file', 'w')
+    write.write(pr_title)
+    write.write("\n")
+    write.write(pr_description)
+    write.close
+
+    base = options[:base] if options[:base]
+    if base
+      pr_link = sh "hub pull-request -F pr_file -b #{base}"
+    else
+      pr_link = sh "hub pull-request -F pr_file"
+    end
+
+    sh "rm pr_file"
+    clipboard(value: pr_link)
+  end
+end

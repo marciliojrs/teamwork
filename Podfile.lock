@@ -1,0 +1,44 @@
+PODS:
+  - IQKeyboardManagerSwift (6.2.0)
+  - Kingfisher (4.10.1)
+  - QuickLayout (2.1.1)
+  - R.swift (5.0.0.alpha.2):
+    - R.swift.Library (~> 5.0.0.alpha.2)
+  - R.swift.Library (5.0.0.alpha.2)
+  - Sourcery (0.15.0)
+  - SwiftEntryKit (0.8.4):
+    - QuickLayout (= 2.1.1)
+  - URLNavigator (2.1.0)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - Kingfisher (~> 4.10.0)
+  - R.swift (= 5.0.0.alpha.2)
+  - Sourcery (~> 0.10)
+  - SwiftEntryKit (= 0.8.4)
+  - URLNavigator
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - QuickLayout
+    - R.swift
+    - R.swift.Library
+    - Sourcery
+    - SwiftEntryKit
+    - URLNavigator
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  QuickLayout: 9af2b7fd89a6552828f51a5aba28d1bcdb8b340c
+  R.swift: 31fa1bd537fa81307815cc622122f33331f32174
+  R.swift.Library: 3c21b823839bf5a6769dc7f96cb44479dab51b1b
+  Sourcery: 5895672cae353cdbfa95f3f4aaeb75a664d76f6a
+  SwiftEntryKit: f0dd54bb0fb9f234738cd15a32365265cb975be8
+  URLNavigator: e8cea3835b3456d7876eb728831e742273c8d209
+
+PODFILE CHECKSUM: ae4093746d26d04c5bf18e1d6cfc247940b5c77a
+
+COCOAPODS: 1.5.0
