@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupWindowAndRoutes()
         setupAppearanceAndUiTools()
         RxImagePickerDelegateProxy.register { RxImagePickerDelegateProxy(imagePicker: $0) }
+
         return true
     }
 

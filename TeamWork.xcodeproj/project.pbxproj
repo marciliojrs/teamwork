@@ -20,6 +20,7 @@
 		749CAA5521462D74995546CF /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63C2941E0D60ADB415B36878 /* Settings.bundle */; };
 		8E21C3977D6EF1C9C22A792A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450E27E37D92A67F2764E645 /* Assets.xcassets */; };
 		92D9EB70CC8B60C1C361455C /* Pods_TeamWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915B91E00684A74974793850 /* Pods_TeamWork.framework */; };
+		A545FB3D060BC8CAAA6FFB49 /* Pods_TeamworkAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7503D0682BC8516002BDDDB /* Pods_TeamworkAPI.framework */; };
 		AD3CEB4F219864DF0068E309 /* BaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEB4A219864DF0068E309 /* BaseAdapter.swift */; };
 		AD3CEB50219864DF0068E309 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEB4B219864DF0068E309 /* BaseViewController.swift */; };
 		AD3CEB51219864DF0068E309 /* LayoutLoading+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEB4C219864DF0068E309 /* LayoutLoading+Constants.swift */; };
@@ -40,14 +41,55 @@
 		AD3CEB9321986B130068E309 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEB8F21986B130068E309 /* Platform.swift */; };
 		AD3CEB9421986B220068E309 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEB8E21986B130068E309 /* Defaults.swift */; };
 		AD3CEB9721986B3A0068E309 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEB8F21986B130068E309 /* Platform.swift */; };
-		AD3CEB9A21986B550068E309 /* AutoInitiable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD3CEB9921986B550068E309 /* AutoInitiable.stencil */; };
-		AD3CEB9B21986B550068E309 /* AutoInitiable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD3CEB9921986B550068E309 /* AutoInitiable.stencil */; };
 		AD3CEB9D219871790068E309 /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3CEB9C219871790068E309 /* RxAtomic.framework */; };
 		AD3CEB9F219874020068E309 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEB9E219874020068E309 /* LoadingView.swift */; };
 		AD3CEBA1219874280068E309 /* UIViewController+Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBA0219874280068E309 /* UIViewController+Modal.swift */; };
 		AD3CEBA3219874650068E309 /* UIImagePickerController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBA2219874650068E309 /* UIImagePickerController+Rx.swift */; };
 		AD3CEBA5219875C20068E309 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD3CEBA4219875C20068E309 /* Localizable.strings */; };
 		AD3CEBBB219881210068E309 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBBA219881210068E309 /* UseCase.swift */; };
+		AD3CEBBE21989FE70068E309 /* GetAllProjectsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBBD21989FE70068E309 /* GetAllProjectsUseCase.swift */; };
+		AD3CEBC021989FF60068E309 /* ProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBBF21989FF60068E309 /* ProjectRepository.swift */; };
+		AD3CEBC22198A0000068E309 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBC12198A0000068E309 /* Project.swift */; };
+		AD3CEBC72198A40D0068E309 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBC62198A40D0068E309 /* Company.swift */; };
+		AD3CEBC92198A4790068E309 /* AutoInitiable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD3CEBC82198A4790068E309 /* AutoInitiable.stencil */; };
+		AD3CEBD32198A5680068E309 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF3D76D2066E7F000737769 /* Domain.framework */; };
+		AD3CEBDB2198A62E0068E309 /* GetAllProjectsUseCaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBDA2198A62E0068E309 /* GetAllProjectsUseCaseSpec.swift */; };
+		AD3CEBDC2198A6510068E309 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDD2063F70B0073BE60 /* Nimble.framework */; };
+		AD3CEBDD2198A6510068E309 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDE2063F70B0073BE60 /* Quick.framework */; };
+		AD3CEBDE2198A6510068E309 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBED92063F70A0073BE60 /* RxBlocking.framework */; };
+		AD3CEBDF2198A6510068E309 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDB2063F70B0073BE60 /* RxSwift.framework */; };
+		AD3CEBE02198A6510068E309 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDC2063F70B0073BE60 /* RxTest.framework */; };
+		AD3CEBE52198AAD60068E309 /* AutoMockable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD3CEBE42198AAD60068E309 /* AutoMockable.stencil */; };
+		AD3CEBE72198AAEE0068E309 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBE62198AAEE0068E309 /* AutoMockable.generated.swift */; };
+		AD3CEBEA2198ACDF0068E309 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBE92198ACDF0068E309 /* DomainError.swift */; };
+		AD3CEBED2198AD4B0068E309 /* TestScheduler+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBEC2198AD4B0068E309 /* TestScheduler+Util.swift */; };
+		AD3CEBEF2198B04E0068E309 /* GetProjectByIdUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBEE2198B04E0068E309 /* GetProjectByIdUseCase.swift */; };
+		AD3CEBF12198B0AB0068E309 /* GetProjectByIdUseCaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBF02198B0AB0068E309 /* GetProjectByIdUseCaseSpec.swift */; };
+		AD3CEBFB2198B4AB0068E309 /* TeamworkAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = AD3CEBF92198B4AB0068E309 /* TeamworkAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD3CEBFE2198B4AB0068E309 /* TeamworkAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3CEBF72198B4AB0068E309 /* TeamworkAPI.framework */; };
+		AD3CEBFF2198B4AB0068E309 /* TeamworkAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD3CEBF72198B4AB0068E309 /* TeamworkAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AD3CEC0B2198B5C90068E309 /* ProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC0A2198B5C90068E309 /* ProjectRepository.swift */; };
+		AD3CEC0D2198B5D50068E309 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC0C2198B5D50068E309 /* UseCaseFactory.swift */; };
+		AD3CEC102198B65B0068E309 /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC0F2198B65B0068E309 /* DomainConvertibleType.swift */; };
+		AD3CEC162198B8130068E309 /* AutoCodable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD3CEC122198B8130068E309 /* AutoCodable.stencil */; };
+		AD3CEC172198B8130068E309 /* AutoMockable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD3CEC132198B8130068E309 /* AutoMockable.stencil */; };
+		AD3CEC182198B8130068E309 /* AutoRequestable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD3CEC142198B8130068E309 /* AutoRequestable.stencil */; };
+		AD3CEC192198B8130068E309 /* AutoEquatable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD3CEC152198B8130068E309 /* AutoEquatable.stencil */; };
+		AD3CEC202198BA240068E309 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC1C2198BA240068E309 /* AutoMockable.generated.swift */; };
+		AD3CEC212198BA240068E309 /* AutoCodable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC1D2198BA240068E309 /* AutoCodable.generated.swift */; };
+		AD3CEC222198BA240068E309 /* AutoEquatable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC1E2198BA240068E309 /* AutoEquatable.generated.swift */; };
+		AD3CEC232198BA240068E309 /* AutoRequestable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC1F2198BA240068E309 /* AutoRequestable.generated.swift */; };
+		AD3CEC272198BA920068E309 /* URLSession+Multipart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC242198BA920068E309 /* URLSession+Multipart.swift */; };
+		AD3CEC282198BA920068E309 /* NetworkRequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC252198BA920068E309 /* NetworkRequestMaker.swift */; };
+		AD3CEC292198BA920068E309 /* URLSession+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC262198BA920068E309 /* URLSession+Rx.swift */; };
+		AD3CEC2C2198BAA40068E309 /* ObservableType+DomainConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC2A2198BAA40068E309 /* ObservableType+DomainConvertible.swift */; };
+		AD3CEC2D2198BAA40068E309 /* ObservableType+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC2B2198BAA40068E309 /* ObservableType+Data.swift */; };
+		AD3CEC2E2198BAC00068E309 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDB2063F70B0073BE60 /* RxSwift.framework */; };
+		AD3CEC312198BB220068E309 /* SourceryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7CEE612069676300635817 /* SourceryProtocols.swift */; };
+		AD3CEC332198BBCF0068E309 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC322198BBCF0068E309 /* Project.swift */; };
+		AD3CEC352198BBD60068E309 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC342198BBD60068E309 /* Company.swift */; };
+		AD3CEC372198C36F0068E309 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC362198C36F0068E309 /* Global.swift */; };
+		AD3CEC392198C5D30068E309 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC382198C5D30068E309 /* String+Base64.swift */; };
 		AD3F2D8C2066B60200989DC1 /* Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3F2D8B2066B60200989DC1 /* Layout.framework */; };
 		AD4FBED82063F5990073BE60 /* AutoCodable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD4FBED72063F5990073BE60 /* AutoCodable.stencil */; };
 		AD4FBEE02063F70B0073BE60 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDA2063F70B0073BE60 /* RxCocoa.framework */; };
@@ -72,6 +114,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AD3CEBD42198A5680068E309 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 107450CC8B312560A7EDF284 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADF3D76C2066E7F000737769;
+			remoteInfo = Domain;
+		};
+		AD3CEBFC2198B4AB0068E309 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 107450CC8B312560A7EDF284 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD3CEBF62198B4AB0068E309;
+			remoteInfo = TeamworkAPI;
+		};
+		AD3CEC2F2198BB070068E309 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 107450CC8B312560A7EDF284 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADF3D76C2066E7F000737769;
+			remoteInfo = Domain;
+		};
 		ADF3D7802066E7F100737769 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 107450CC8B312560A7EDF284 /* Project object */;
@@ -89,6 +152,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				ADF3D7832066E7F100737769 /* Domain.framework in Embed Frameworks */,
+				AD3CEBFF2198B4AB0068E309 /* TeamworkAPI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +161,7 @@
 
 /* Begin PBXFileReference section */
 		0EB491BEEC3AC10D76287275 /* Pods-TeamWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeamWork/Pods-TeamWork.release.xcconfig"; sourceTree = "<group>"; };
+		0FD2D15E6FF0B6B010FAC369 /* Pods-TeamworkAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamworkAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeamworkAPI/Pods-TeamworkAPI.release.xcconfig"; sourceTree = "<group>"; };
 		1223D498DC9A5029BF07A810 /* ViewModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelController.swift; sourceTree = "<group>"; };
 		1223D5AB5C9B0ACAEBC17430 /* RxActivityTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxActivityTracker.swift; sourceTree = "<group>"; };
 		1223D68FC99FE059201E8E4D /* UseCaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
@@ -114,7 +179,6 @@
 		799130B1388CD1B59E368C21 /* AutoMockable.stencil */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = AutoMockable.stencil; sourceTree = "<group>"; };
 		79BF8A67E8ABF126B7A02893 /* AutoEquatable.stencil */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = AutoEquatable.stencil; sourceTree = "<group>"; };
 		7D9683CCC273D565986BE5A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		824727331E489C0EA978623E /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8836BA0CB6FA463EF9CC22A3 /* TeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		915B91E00684A74974793850 /* Pods_TeamWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D62DDDD5686D82CF43957AB /* Pods_Domain_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +192,7 @@
 		AD3CEB582198659A0068E309 /* TranparentNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranparentNavigationController.swift; sourceTree = "<group>"; };
 		AD3CEB5C219865E90068E309 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		AD3CEB5E2198666F0068E309 /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
-		AD3CEB772198671C0068E309 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		AD3CEB772198671C0068E309 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AD3CEB792198671C0068E309 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		AD3CEB7A2198671D0068E309 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		AD3CEB7B2198671D0068E309 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
@@ -140,7 +204,6 @@
 		AD3CEB8C21986B130068E309 /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
 		AD3CEB8E21986B130068E309 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		AD3CEB8F21986B130068E309 /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
-		AD3CEB9921986B550068E309 /* AutoInitiable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoInitiable.stencil; sourceTree = "<group>"; };
 		AD3CEB9C219871790068E309 /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/iOS/RxAtomic.framework; sourceTree = "<group>"; };
 		AD3CEB9E219874020068E309 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		AD3CEBA0219874280068E309 /* UIViewController+Modal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Modal.swift"; sourceTree = "<group>"; };
@@ -152,6 +215,45 @@
 		AD3CEBB4219878760068E309 /* setup */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = setup; sourceTree = "<group>"; };
 		AD3CEBB5219878760068E309 /* pr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = pr; sourceTree = "<group>"; };
 		AD3CEBBA219881210068E309 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		AD3CEBBD21989FE70068E309 /* GetAllProjectsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProjectsUseCase.swift; sourceTree = "<group>"; };
+		AD3CEBBF21989FF60068E309 /* ProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRepository.swift; sourceTree = "<group>"; };
+		AD3CEBC12198A0000068E309 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		AD3CEBC42198A08F0068E309 /* env.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = env.debug.xcconfig; sourceTree = "<group>"; };
+		AD3CEBC52198A0B10068E309 /* env.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = env.release.xcconfig; sourceTree = "<group>"; };
+		AD3CEBC62198A40D0068E309 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		AD3CEBC82198A4790068E309 /* AutoInitiable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoInitiable.stencil; sourceTree = "<group>"; };
+		AD3CEBCE2198A5680068E309 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD3CEBD92198A5970068E309 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		AD3CEBDA2198A62E0068E309 /* GetAllProjectsUseCaseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProjectsUseCaseSpec.swift; sourceTree = "<group>"; };
+		AD3CEBE42198AAD60068E309 /* AutoMockable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoMockable.stencil; sourceTree = "<group>"; };
+		AD3CEBE62198AAEE0068E309 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		AD3CEBE92198ACDF0068E309 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
+		AD3CEBEC2198AD4B0068E309 /* TestScheduler+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TestScheduler+Util.swift"; sourceTree = "<group>"; };
+		AD3CEBEE2198B04E0068E309 /* GetProjectByIdUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProjectByIdUseCase.swift; sourceTree = "<group>"; };
+		AD3CEBF02198B0AB0068E309 /* GetProjectByIdUseCaseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProjectByIdUseCaseSpec.swift; sourceTree = "<group>"; };
+		AD3CEBF72198B4AB0068E309 /* TeamworkAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TeamworkAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD3CEBF92198B4AB0068E309 /* TeamworkAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamworkAPI.h; sourceTree = "<group>"; };
+		AD3CEBFA2198B4AB0068E309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD3CEC0A2198B5C90068E309 /* ProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRepository.swift; sourceTree = "<group>"; };
+		AD3CEC0C2198B5D50068E309 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
+		AD3CEC0F2198B65B0068E309 /* DomainConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
+		AD3CEC122198B8130068E309 /* AutoCodable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoCodable.stencil; sourceTree = "<group>"; };
+		AD3CEC132198B8130068E309 /* AutoMockable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoMockable.stencil; sourceTree = "<group>"; };
+		AD3CEC142198B8130068E309 /* AutoRequestable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoRequestable.stencil; sourceTree = "<group>"; };
+		AD3CEC152198B8130068E309 /* AutoEquatable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoEquatable.stencil; sourceTree = "<group>"; };
+		AD3CEC1C2198BA240068E309 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		AD3CEC1D2198BA240068E309 /* AutoCodable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCodable.generated.swift; sourceTree = "<group>"; };
+		AD3CEC1E2198BA240068E309 /* AutoEquatable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatable.generated.swift; sourceTree = "<group>"; };
+		AD3CEC1F2198BA240068E309 /* AutoRequestable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoRequestable.generated.swift; sourceTree = "<group>"; };
+		AD3CEC242198BA920068E309 /* URLSession+Multipart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Multipart.swift"; sourceTree = "<group>"; };
+		AD3CEC252198BA920068E309 /* NetworkRequestMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestMaker.swift; sourceTree = "<group>"; };
+		AD3CEC262198BA920068E309 /* URLSession+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Rx.swift"; sourceTree = "<group>"; };
+		AD3CEC2A2198BAA40068E309 /* ObservableType+DomainConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+DomainConvertible.swift"; sourceTree = "<group>"; };
+		AD3CEC2B2198BAA40068E309 /* ObservableType+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+Data.swift"; sourceTree = "<group>"; };
+		AD3CEC322198BBCF0068E309 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		AD3CEC342198BBD60068E309 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		AD3CEC362198C36F0068E309 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		AD3CEC382198C5D30068E309 /* String+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64.swift"; sourceTree = "<group>"; };
 		AD3F2D8B2066B60200989DC1 /* Layout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Layout.framework; path = Carthage/Build/iOS/Layout.framework; sourceTree = "<group>"; };
 		AD4FBED72063F5990073BE60 /* AutoCodable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoCodable.stencil; sourceTree = "<group>"; };
 		AD4FBED92063F70A0073BE60 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
@@ -172,13 +274,36 @@
 		ADF3D76D2066E7F000737769 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF3D76F2066E7F000737769 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		ADF3D7702066E7F000737769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7976EB99BCBA2317AEC660C /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BD9F9A628D33B666DB1EC7EF /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0153E0A5DCECA7DCBA2E3E6 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
+		C7503D0682BC8516002BDDDB /* Pods_TeamworkAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamworkAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99DA9AC3BBCA9C99AA110EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF3AEDFC2765F8470CD8125E /* Pods-TeamworkAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamworkAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TeamworkAPI/Pods-TeamworkAPI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AD3CEBCB2198A5680068E309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD3CEBDF2198A6510068E309 /* RxSwift.framework in Frameworks */,
+				AD3CEBD32198A5680068E309 /* Domain.framework in Frameworks */,
+				AD3CEBE02198A6510068E309 /* RxTest.framework in Frameworks */,
+				AD3CEBDC2198A6510068E309 /* Nimble.framework in Frameworks */,
+				AD3CEBDD2198A6510068E309 /* Quick.framework in Frameworks */,
+				AD3CEBDE2198A6510068E309 /* RxBlocking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD3CEBF42198B4AB0068E309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD3CEC2E2198BAC00068E309 /* RxSwift.framework in Frameworks */,
+				A545FB3D060BC8CAAA6FFB49 /* Pods_TeamworkAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ADF3D7692066E7F000737769 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -198,6 +323,7 @@
 				AD3F2D8C2066B60200989DC1 /* Layout.framework in Frameworks */,
 				ADF3D7822066E7F100737769 /* Domain.framework in Frameworks */,
 				AD3CEB9D219871790068E309 /* RxAtomic.framework in Frameworks */,
+				AD3CEBFE2198B4AB0068E309 /* TeamworkAPI.framework in Frameworks */,
 				44669B05A37E2B637F886B08 /* Foundation.framework in Frameworks */,
 				92D9EB70CC8B60C1C361455C /* Pods_TeamWork.framework in Frameworks */,
 			);
@@ -213,8 +339,8 @@
 				5E36CD6673319F953BB05349 /* Pods-TeamWork.debug.xcconfig */,
 				3EEFBBB2676CE7B334F41C51 /* Pods-Domain.debug.xcconfig */,
 				C0153E0A5DCECA7DCBA2E3E6 /* Pods-Domain.release.xcconfig */,
-				B7976EB99BCBA2317AEC660C /* Pods-Tests.release.xcconfig */,
-				824727331E489C0EA978623E /* Pods-Tests.debug.xcconfig */,
+				EF3AEDFC2765F8470CD8125E /* Pods-TeamworkAPI.debug.xcconfig */,
+				0FD2D15E6FF0B6B010FAC369 /* Pods-TeamworkAPI.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -231,6 +357,10 @@
 			children = (
 				AD3CEBBA219881210068E309 /* UseCase.swift */,
 				1223D68FC99FE059201E8E4D /* UseCaseFactory.swift */,
+				AD3CEBBD21989FE70068E309 /* GetAllProjectsUseCase.swift */,
+				AD3CEBDA2198A62E0068E309 /* GetAllProjectsUseCaseSpec.swift */,
+				AD3CEBEE2198B04E0068E309 /* GetProjectByIdUseCase.swift */,
+				AD3CEBF02198B0AB0068E309 /* GetProjectByIdUseCaseSpec.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -238,6 +368,7 @@
 		1BCBC7F2950065EBE5E87F8B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AD3CEBC32198A07D0068E309 /* Environment */,
 				4758D6CDA02066D6387AD4DB /* main.swift */,
 				D99DA9AC3BBCA9C99AA110EA /* Info.plist */,
 				AD3CEBA4219875C20068E309 /* Localizable.strings */,
@@ -334,6 +465,7 @@
 				BD9F9A628D33B666DB1EC7EF /* AppDelegate.swift */,
 				3AECD138792952ACA9B3BF2B /* TestsAppDelegate.swift */,
 				AD3CEB5C219865E90068E309 /* Route.swift */,
+				AD3CEC362198C36F0068E309 /* Global.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -426,7 +558,6 @@
 		AD3CEB9821986B450068E309 /* Sourcery */ = {
 			isa = PBXGroup;
 			children = (
-				AD3CEB9921986B550068E309 /* AutoInitiable.stencil */,
 				AD7CEE612069676300635817 /* SourceryProtocols.swift */,
 			);
 			path = Sourcery;
@@ -451,6 +582,147 @@
 			path = bin;
 			sourceTree = "<group>";
 		};
+		AD3CEBBC21989FC90068E309 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEBBF21989FF60068E309 /* ProjectRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		AD3CEBC32198A07D0068E309 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEBC42198A08F0068E309 /* env.debug.xcconfig */,
+				AD3CEBC52198A0B10068E309 /* env.release.xcconfig */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		AD3CEBE82198ACD30068E309 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEBE92198ACDF0068E309 /* DomainError.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		AD3CEBEB2198AD410068E309 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEBEC2198AD4B0068E309 /* TestScheduler+Util.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		AD3CEBF82198B4AB0068E309 /* TeamworkAPI */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEC032198B4C90068E309 /* Entity */,
+				AD3CEC082198B54A0068E309 /* Network */,
+				AD3CEC062198B5390068E309 /* Resources */,
+				AD3CEC042198B4CF0068E309 /* Repository */,
+				AD3CEC052198B51A0068E309 /* UseCase */,
+				AD3CEC092198B5590068E309 /* Util */,
+				AD3CEBF92198B4AB0068E309 /* TeamworkAPI.h */,
+				AD3CEBFA2198B4AB0068E309 /* Info.plist */,
+			);
+			path = TeamworkAPI;
+			sourceTree = "<group>";
+		};
+		AD3CEC032198B4C90068E309 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEC0E2198B6470068E309 /* Domain Convertible */,
+				AD3CEC322198BBCF0068E309 /* Project.swift */,
+				AD3CEC342198BBD60068E309 /* Company.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		AD3CEC042198B4CF0068E309 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEC0A2198B5C90068E309 /* ProjectRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		AD3CEC052198B51A0068E309 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEC0C2198B5D50068E309 /* UseCaseFactory.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		AD3CEC062198B5390068E309 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEC072198B53E0068E309 /* Sourcery */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AD3CEC072198B53E0068E309 /* Sourcery */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEC1A2198B81A0068E309 /* Generated */,
+				AD3CEC112198B8130068E309 /* Templates */,
+			);
+			path = Sourcery;
+			sourceTree = "<group>";
+		};
+		AD3CEC082198B54A0068E309 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEC252198BA920068E309 /* NetworkRequestMaker.swift */,
+				AD3CEC242198BA920068E309 /* URLSession+Multipart.swift */,
+				AD3CEC262198BA920068E309 /* URLSession+Rx.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AD3CEC092198B5590068E309 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEC2B2198BAA40068E309 /* ObservableType+Data.swift */,
+				AD3CEC2A2198BAA40068E309 /* ObservableType+DomainConvertible.swift */,
+				AD3CEC382198C5D30068E309 /* String+Base64.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		AD3CEC0E2198B6470068E309 /* Domain Convertible */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEC0F2198B65B0068E309 /* DomainConvertibleType.swift */,
+			);
+			path = "Domain Convertible";
+			sourceTree = "<group>";
+		};
+		AD3CEC112198B8130068E309 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEC122198B8130068E309 /* AutoCodable.stencil */,
+				AD3CEC132198B8130068E309 /* AutoMockable.stencil */,
+				AD3CEC142198B8130068E309 /* AutoRequestable.stencil */,
+				AD3CEC152198B8130068E309 /* AutoEquatable.stencil */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		AD3CEC1A2198B81A0068E309 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEC1D2198BA240068E309 /* AutoCodable.generated.swift */,
+				AD3CEC1E2198BA240068E309 /* AutoEquatable.generated.swift */,
+				AD3CEC1C2198BA240068E309 /* AutoMockable.generated.swift */,
+				AD3CEC1F2198BA240068E309 /* AutoRequestable.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		AD7CEE3E2069655700635817 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +744,7 @@
 			isa = PBXGroup;
 			children = (
 				AD73987A208BD61F00B6A1E4 /* AutoEquatable.generated.swift */,
+				AD3CEBE62198AAEE0068E309 /* AutoMockable.generated.swift */,
 			);
 			path = Sourcery;
 			sourceTree = "<group>";
@@ -479,7 +752,9 @@
 		AD7CEE412069656C00635817 /* SourceryTemplates */ = {
 			isa = PBXGroup;
 			children = (
+				AD3CEBC82198A4790068E309 /* AutoInitiable.stencil */,
 				AD7CEE56206966C800635817 /* AutoEquatable.stencil */,
+				AD3CEBE42198AAD60068E309 /* AutoMockable.stencil */,
 			);
 			path = SourceryTemplates;
 			sourceTree = "<group>";
@@ -487,6 +762,7 @@
 		AD7CEE602069673F00635817 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				AD3CEBEB2198AD410068E309 /* Test */,
 				AD3CEB9821986B450068E309 /* Sourcery */,
 				AD3CEB8D21986B130068E309 /* Defaults */,
 				AD3CEB8F21986B130068E309 /* Platform.swift */,
@@ -499,9 +775,12 @@
 			children = (
 				AD7CEE3E2069655700635817 /* Resources */,
 				ADF3D78C2066EA7200737769 /* Entity */,
+				AD3CEBBC21989FC90068E309 /* Repository */,
 				1223D63489F449F6C181EFFA /* UseCase */,
+				AD3CEBE82198ACD30068E309 /* Util */,
 				ADF3D76F2066E7F000737769 /* Domain.h */,
 				ADF3D7702066E7F000737769 /* Info.plist */,
+				AD3CEBD92198A5970068E309 /* Tests-Info.plist */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -509,6 +788,8 @@
 		ADF3D78C2066EA7200737769 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				AD3CEBC12198A0000068E309 /* Project.swift */,
+				AD3CEBC62198A40D0068E309 /* Company.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -528,6 +809,7 @@
 				21608C716C194C54230CEA80 /* Pods_Domain.framework */,
 				9D62DDDD5686D82CF43957AB /* Pods_Domain_DomainTests.framework */,
 				915B91E00684A74974793850 /* Pods_TeamWork.framework */,
+				C7503D0682BC8516002BDDDB /* Pods_TeamworkAPI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -538,6 +820,7 @@
 				AD7CEE602069673F00635817 /* Shared */,
 				4524C4575350AE9154D3E674 /* TeamWork */,
 				ADF3D76E2066E7F000737769 /* Domain */,
+				AD3CEBF82198B4AB0068E309 /* TeamworkAPI */,
 				C356B459C2B39B1494623458 /* Frameworks */,
 				EE5812E1A44F2F805917CD67 /* Products */,
 				0DD2BCFF488141D64FD20F5C /* Pods */,
@@ -563,6 +846,8 @@
 			children = (
 				8836BA0CB6FA463EF9CC22A3 /* TeamWork.app */,
 				ADF3D76D2066E7F000737769 /* Domain.framework */,
+				AD3CEBCE2198A5680068E309 /* DomainTests.xctest */,
+				AD3CEBF72198B4AB0068E309 /* TeamworkAPI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -570,6 +855,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		AD3CEBF22198B4AB0068E309 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD3CEBFB2198B4AB0068E309 /* TeamworkAPI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ADF3D76A2066E7F000737769 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -602,11 +895,52 @@
 			);
 			dependencies = (
 				ADF3D7812066E7F100737769 /* PBXTargetDependency */,
+				AD3CEBFD2198B4AB0068E309 /* PBXTargetDependency */,
 			);
 			name = TeamWork;
 			productName = TeamWork;
 			productReference = 8836BA0CB6FA463EF9CC22A3 /* TeamWork.app */;
 			productType = "com.apple.product-type.application";
+		};
+		AD3CEBCD2198A5680068E309 /* DomainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD3CEBD62198A5680068E309 /* Build configuration list for PBXNativeTarget "DomainTests" */;
+			buildPhases = (
+				AD3CEBCA2198A5680068E309 /* Sources */,
+				AD3CEBCB2198A5680068E309 /* Frameworks */,
+				AD3CEBCC2198A5680068E309 /* Resources */,
+				AD3CEBE12198A6A30068E309 /* [Carthage] Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD3CEBD52198A5680068E309 /* PBXTargetDependency */,
+			);
+			name = DomainTests;
+			productName = DomainTests;
+			productReference = AD3CEBCE2198A5680068E309 /* DomainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AD3CEBF62198B4AB0068E309 /* TeamworkAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD3CEC002198B4AB0068E309 /* Build configuration list for PBXNativeTarget "TeamworkAPI" */;
+			buildPhases = (
+				2E4B5B59ACBC855E3351B160 /* [CP] Check Pods Manifest.lock */,
+				AD3CEBF22198B4AB0068E309 /* Headers */,
+				AD3CEC1B2198B88B0068E309 /* Sourcery */,
+				AD3CEBF32198B4AB0068E309 /* Sources */,
+				AD3CEBF42198B4AB0068E309 /* Frameworks */,
+				AD3CEBF52198B4AB0068E309 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD3CEC302198BB070068E309 /* PBXTargetDependency */,
+			);
+			name = TeamworkAPI;
+			productName = TeamworkAPI;
+			productReference = AD3CEBF72198B4AB0068E309 /* TeamworkAPI.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		ADF3D76C2066E7F000737769 /* Domain */ = {
 			isa = PBXNativeTarget;
@@ -635,10 +969,20 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = "";
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Ignus Digital";
 				TargetAttributes = {
+					AD3CEBCD2198A5680068E309 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+					};
+					AD3CEBF62198B4AB0068E309 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+					};
 					ADF3D76C2066E7F000737769 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -660,6 +1004,8 @@
 			targets = (
 				063568DE4120806752E029C8 /* TeamWork */,
 				ADF3D76C2066E7F000737769 /* Domain */,
+				AD3CEBCD2198A5680068E309 /* DomainTests */,
+				AD3CEBF62198B4AB0068E309 /* TeamworkAPI */,
 			);
 		};
 /* End PBXProject section */
@@ -671,10 +1017,27 @@
 			files = (
 				606B55B124B388D5EE3F929A /* LaunchScreen.storyboard in Resources */,
 				AD3CEBA5219875C20068E309 /* Localizable.strings in Resources */,
-				AD3CEB9A21986B550068E309 /* AutoInitiable.stencil in Resources */,
 				AD4FBED82063F5990073BE60 /* AutoCodable.stencil in Resources */,
 				8E21C3977D6EF1C9C22A792A /* Assets.xcassets in Resources */,
 				749CAA5521462D74995546CF /* Settings.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD3CEBCC2198A5680068E309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD3CEBF52198B4AB0068E309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD3CEC162198B8130068E309 /* AutoCodable.stencil in Resources */,
+				AD3CEC182198B8130068E309 /* AutoRequestable.stencil in Resources */,
+				AD3CEC192198B8130068E309 /* AutoEquatable.stencil in Resources */,
+				AD3CEC172198B8130068E309 /* AutoMockable.stencil in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,7 +1046,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7CEE59206966C800635817 /* AutoEquatable.stencil in Resources */,
-				AD3CEB9B21986B550068E309 /* AutoInitiable.stencil in Resources */,
+				AD3CEBC92198A4790068E309 /* AutoInitiable.stencil in Resources */,
+				AD3CEBE52198AAD60068E309 /* AutoMockable.stencil in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,6 +1084,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		2E4B5B59ACBC855E3351B160 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TeamworkAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 		7E84B41CFB7653602B12354D /* Tag Icons */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -763,6 +1149,46 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TeamWork/Pods-TeamWork-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AD3CEBE12198A6A30068E309 /* [Carthage] Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Carthage] Copy Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage-copy-frameworks\n";
+		};
+		AD3CEC1B2198B88B0068E309 /* Sourcery */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Sourcery;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/TeamworkAPI/Resources/Sourcery/Generated/AutoCodable.generated.swift",
+				"$(SRCROOT)/TeamworkAPI/Resources/Sourcery/Generated/AutoMockable.generated.swift",
+				"$(SRCROOT)/TeamworkAPI/Resources/Sourcery/Generated/AutoRequestable.generated.swift",
+				"$(SRCROOT)/TeamworkAPI/Resources/Sourcery/Generated/AutoEquatable.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Sourcery/bin/sourcery\" --sources \"TeamworkAPI\" --templates \"TeamworkAPI/Resources/Sourcery/Templates\" --output \"TeamworkAPI/Resources/Sourcery/Generated\"\n";
+		};
 		AD4FBED62063F4F90073BE60 /* [Carthage] Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -775,7 +1201,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "carthage-copy-frameworks --exclude Quick.framework Nimble.framework RxTest.framework RxBlocking.framework";
+			shellScript = "carthage-copy-frameworks --exclude Quick.framework Nimble.framework RxTest.framework RxBlocking.framework\n";
 		};
 		AD7CEE3D2069652400635817 /* Sourcery */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -787,6 +1213,7 @@
 			name = Sourcery;
 			outputPaths = (
 				"$(SRCROOT)/Domain/Resources/Generated/Sourcery/AutoEquatable.generated.swift",
+				"$(SRCROOT)/Domain/Resources/Generated/Sourcery/AutoMockable.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -868,6 +1295,7 @@
 				AD3CEB9221986B130068E309 /* Defaults.swift in Sources */,
 				AD3CEB592198659A0068E309 /* ExternalNavigationController.swift in Sources */,
 				EF2911B840A2D94611C1C886 /* AppDelegate.swift in Sources */,
+				AD3CEC372198C36F0068E309 /* Global.swift in Sources */,
 				2F2E17FC4302A67442B3E537 /* TestsAppDelegate.swift in Sources */,
 				AD7CEE622069676300635817 /* SourceryProtocols.swift in Sources */,
 				AD3CEBA3219874650068E309 /* UIImagePickerController+Rx.swift in Sources */,
@@ -903,22 +1331,77 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AD3CEBCA2198A5680068E309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD3CEBDB2198A62E0068E309 /* GetAllProjectsUseCaseSpec.swift in Sources */,
+				AD3CEBF12198B0AB0068E309 /* GetProjectByIdUseCaseSpec.swift in Sources */,
+				AD3CEBED2198AD4B0068E309 /* TestScheduler+Util.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD3CEBF32198B4AB0068E309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD3CEC222198BA240068E309 /* AutoEquatable.generated.swift in Sources */,
+				AD3CEC272198BA920068E309 /* URLSession+Multipart.swift in Sources */,
+				AD3CEC0D2198B5D50068E309 /* UseCaseFactory.swift in Sources */,
+				AD3CEC312198BB220068E309 /* SourceryProtocols.swift in Sources */,
+				AD3CEC282198BA920068E309 /* NetworkRequestMaker.swift in Sources */,
+				AD3CEC392198C5D30068E309 /* String+Base64.swift in Sources */,
+				AD3CEC332198BBCF0068E309 /* Project.swift in Sources */,
+				AD3CEC292198BA920068E309 /* URLSession+Rx.swift in Sources */,
+				AD3CEC0B2198B5C90068E309 /* ProjectRepository.swift in Sources */,
+				AD3CEC352198BBD60068E309 /* Company.swift in Sources */,
+				AD3CEC102198B65B0068E309 /* DomainConvertibleType.swift in Sources */,
+				AD3CEC212198BA240068E309 /* AutoCodable.generated.swift in Sources */,
+				AD3CEC2D2198BAA40068E309 /* ObservableType+Data.swift in Sources */,
+				AD3CEC202198BA240068E309 /* AutoMockable.generated.swift in Sources */,
+				AD3CEC2C2198BAA40068E309 /* ObservableType+DomainConvertible.swift in Sources */,
+				AD3CEC232198BA240068E309 /* AutoRequestable.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ADF3D7682066E7F000737769 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD3CEBEF2198B04E0068E309 /* GetProjectByIdUseCase.swift in Sources */,
 				AD3CEB9721986B3A0068E309 /* Platform.swift in Sources */,
+				AD3CEBC021989FF60068E309 /* ProjectRepository.swift in Sources */,
+				AD3CEBE72198AAEE0068E309 /* AutoMockable.generated.swift in Sources */,
 				AD73987B208BD62000B6A1E4 /* AutoEquatable.generated.swift in Sources */,
+				AD3CEBC72198A40D0068E309 /* Company.swift in Sources */,
 				AD3CEB9421986B220068E309 /* Defaults.swift in Sources */,
 				AD3CEBBB219881210068E309 /* UseCase.swift in Sources */,
 				AD7CEE642069676300635817 /* SourceryProtocols.swift in Sources */,
+				AD3CEBBE21989FE70068E309 /* GetAllProjectsUseCase.swift in Sources */,
 				1223D3543E29159317E92D39 /* UseCaseFactory.swift in Sources */,
+				AD3CEBEA2198ACDF0068E309 /* DomainError.swift in Sources */,
+				AD3CEBC22198A0000068E309 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		AD3CEBD52198A5680068E309 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADF3D76C2066E7F000737769 /* Domain */;
+			targetProxy = AD3CEBD42198A5680068E309 /* PBXContainerItemProxy */;
+		};
+		AD3CEBFD2198B4AB0068E309 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD3CEBF62198B4AB0068E309 /* TeamworkAPI */;
+			targetProxy = AD3CEBFC2198B4AB0068E309 /* PBXContainerItemProxy */;
+		};
+		AD3CEC302198BB070068E309 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADF3D76C2066E7F000737769 /* Domain */;
+			targetProxy = AD3CEC2F2198BB070068E309 /* PBXContainerItemProxy */;
+		};
 		ADF3D7812066E7F100737769 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = ADF3D76C2066E7F000737769 /* Domain */;
@@ -929,7 +1412,7 @@
 /* Begin XCBuildConfiguration section */
 		3BF14DD18D51114868A2A160 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EB491BEEC3AC10D76287275 /* Pods-TeamWork.release.xcconfig */;
+			baseConfigurationReference = AD3CEBC52198A0B10068E309 /* env.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1023,6 +1506,122 @@
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
+		};
+		AD3CEBD72198A5680068E309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				INFOPLIST_FILE = "Domain/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teamwork.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD3CEBD82198A5680068E309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				INFOPLIST_FILE = "Domain/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teamwork.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD3CEC012198B4AB0068E309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF3AEDFC2765F8470CD8125E /* Pods-TeamworkAPI.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				INFOPLIST_FILE = TeamworkAPI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teamwork.TeamworkAPI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AD3CEC022198B4AB0068E309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FD2D15E6FF0B6B010FAC369 /* Pods-TeamworkAPI.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				INFOPLIST_FILE = TeamworkAPI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teamwork.TeamworkAPI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		ADF3D7852066E7F100737769 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1160,7 +1759,7 @@
 		};
 		F2A70B0FC0B4BF9BFE87E7DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E36CD6673319F953BB05349 /* Pods-TeamWork.debug.xcconfig */;
+			baseConfigurationReference = AD3CEBC42198A08F0068E309 /* env.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1197,6 +1796,24 @@
 			buildConfigurations = (
 				7358610E197EF4B2B137CA40 /* Debug */,
 				B44FE0D4C189396D5542BBBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD3CEBD62198A5680068E309 /* Build configuration list for PBXNativeTarget "DomainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD3CEBD72198A5680068E309 /* Debug */,
+				AD3CEBD82198A5680068E309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD3CEC002198B4AB0068E309 /* Build configuration list for PBXNativeTarget "TeamworkAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD3CEC012198B4AB0068E309 /* Debug */,
+				AD3CEC022198B4AB0068E309 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

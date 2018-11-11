@@ -1,1 +1,1 @@
-protocol UseCase: class {}
+public protocol UseCase {}

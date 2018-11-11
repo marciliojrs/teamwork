@@ -4,16 +4,16 @@ disabled_rules:
 excluded: # paths to ignore during linting. Takes precedence over `included`.    
   - Pods 
   - Carthage   
-  - TeamWork/Resources/Generated/R/R.generated.swift
-  - TeamWork/Resources/Generated/Sourcery/AutoEquatable.generated.swift
-  - TeamWork/Resources/Generated/Sourcery/AutoMockable.generated.swift
-  - TeamWork/Resources/Generated/Sourcery/AutoCodable.generated.swift
-  - Domain/Resources/Generated/Sourcery/AutoEquatable.generated.swift
+  - TeamWork/Resources/Generated/R/R.generated.swift  
+  - TeamWork/Resources/Generated/Sourcery/*.generated.swift
+  - Domain/Resources/Generated/Sourcery/*.generated.swift
+  - TeamworkAPI/Resources/Sourcery/Generated/*.generated.swift  
 
 identifier_name:
   excluded:
     - id
     - rx
+    - to
 
 line_length:
   warning: 120

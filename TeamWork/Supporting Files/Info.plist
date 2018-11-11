@@ -34,5 +34,11 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>serverBaseUrl</key>
+	<string>${API_BASE_URL}</string>
+	<key>serverProtocol</key>
+	<string>${API_BASE_PROTOCOL}</string>
+	<key>serverUrl</key>
+	<string>${API_BASE_PROTOCOL}://${API_BASE_URL}</string>
 </dict>
 </plist>

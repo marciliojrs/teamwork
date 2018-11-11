@@ -20,3 +20,7 @@ end
 target 'Domain' do
   shared_pods
 end
+
+target 'TeamworkAPI' do
+    shared_pods
+end
