@@ -58,6 +58,10 @@
 		AD3CEBDE2198A6510068E309 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBED92063F70A0073BE60 /* RxBlocking.framework */; };
 		AD3CEBDF2198A6510068E309 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDB2063F70B0073BE60 /* RxSwift.framework */; };
 		AD3CEBE02198A6510068E309 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDC2063F70B0073BE60 /* RxTest.framework */; };
+		AD3CEBE52198AAD60068E309 /* AutoMockable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD3CEBE42198AAD60068E309 /* AutoMockable.stencil */; };
+		AD3CEBE72198AAEE0068E309 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBE62198AAEE0068E309 /* AutoMockable.generated.swift */; };
+		AD3CEBEA2198ACDF0068E309 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBE92198ACDF0068E309 /* DomainError.swift */; };
+		AD3CEBED2198AD4B0068E309 /* TestScheduler+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBEC2198AD4B0068E309 /* TestScheduler+Util.swift */; };
 		AD3F2D8C2066B60200989DC1 /* Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3F2D8B2066B60200989DC1 /* Layout.framework */; };
 		AD4FBED82063F5990073BE60 /* AutoCodable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD4FBED72063F5990073BE60 /* AutoCodable.stencil */; };
 		AD4FBEE02063F70B0073BE60 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDA2063F70B0073BE60 /* RxCocoa.framework */; };
@@ -177,6 +181,10 @@
 		AD3CEBCE2198A5680068E309 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD3CEBD92198A5970068E309 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		AD3CEBDA2198A62E0068E309 /* GetAllProjectsUseCaseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProjectsUseCaseSpec.swift; sourceTree = "<group>"; };
+		AD3CEBE42198AAD60068E309 /* AutoMockable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoMockable.stencil; sourceTree = "<group>"; };
+		AD3CEBE62198AAEE0068E309 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		AD3CEBE92198ACDF0068E309 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
+		AD3CEBEC2198AD4B0068E309 /* TestScheduler+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TestScheduler+Util.swift"; sourceTree = "<group>"; };
 		AD3F2D8B2066B60200989DC1 /* Layout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Layout.framework; path = Carthage/Build/iOS/Layout.framework; sourceTree = "<group>"; };
 		AD4FBED72063F5990073BE60 /* AutoCodable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoCodable.stencil; sourceTree = "<group>"; };
 		AD4FBED92063F70A0073BE60 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
@@ -505,6 +513,22 @@
 			path = Environment;
 			sourceTree = "<group>";
 		};
+		AD3CEBE82198ACD30068E309 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEBE92198ACDF0068E309 /* DomainError.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		AD3CEBEB2198AD410068E309 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CEBEC2198AD4B0068E309 /* TestScheduler+Util.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		AD7CEE3E2069655700635817 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,6 +550,7 @@
 			isa = PBXGroup;
 			children = (
 				AD73987A208BD61F00B6A1E4 /* AutoEquatable.generated.swift */,
+				AD3CEBE62198AAEE0068E309 /* AutoMockable.generated.swift */,
 			);
 			path = Sourcery;
 			sourceTree = "<group>";
@@ -535,6 +560,7 @@
 			children = (
 				AD3CEBC82198A4790068E309 /* AutoInitiable.stencil */,
 				AD7CEE56206966C800635817 /* AutoEquatable.stencil */,
+				AD3CEBE42198AAD60068E309 /* AutoMockable.stencil */,
 			);
 			path = SourceryTemplates;
 			sourceTree = "<group>";
@@ -542,6 +568,7 @@
 		AD7CEE602069673F00635817 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				AD3CEBEB2198AD410068E309 /* Test */,
 				AD3CEB9821986B450068E309 /* Sourcery */,
 				AD3CEB8D21986B130068E309 /* Defaults */,
 				AD3CEB8F21986B130068E309 /* Platform.swift */,
@@ -556,6 +583,7 @@
 				ADF3D78C2066EA7200737769 /* Entity */,
 				AD3CEBBC21989FC90068E309 /* Repository */,
 				1223D63489F449F6C181EFFA /* UseCase */,
+				AD3CEBE82198ACD30068E309 /* Util */,
 				ADF3D76F2066E7F000737769 /* Domain.h */,
 				ADF3D7702066E7F000737769 /* Info.plist */,
 				AD3CEBD92198A5970068E309 /* Tests-Info.plist */,
@@ -775,6 +803,7 @@
 			files = (
 				AD7CEE59206966C800635817 /* AutoEquatable.stencil in Resources */,
 				AD3CEBC92198A4790068E309 /* AutoInitiable.stencil in Resources */,
+				AD3CEBE52198AAD60068E309 /* AutoMockable.stencil in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,6 +925,7 @@
 			name = Sourcery;
 			outputPaths = (
 				"$(SRCROOT)/Domain/Resources/Generated/Sourcery/AutoEquatable.generated.swift",
+				"$(SRCROOT)/Domain/Resources/Generated/Sourcery/AutoMockable.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1017,6 +1047,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD3CEBDB2198A62E0068E309 /* GetAllProjectsUseCaseSpec.swift in Sources */,
+				AD3CEBED2198AD4B0068E309 /* TestScheduler+Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1026,6 +1057,7 @@
 			files = (
 				AD3CEB9721986B3A0068E309 /* Platform.swift in Sources */,
 				AD3CEBC021989FF60068E309 /* ProjectRepository.swift in Sources */,
+				AD3CEBE72198AAEE0068E309 /* AutoMockable.generated.swift in Sources */,
 				AD73987B208BD62000B6A1E4 /* AutoEquatable.generated.swift in Sources */,
 				AD3CEBC72198A40D0068E309 /* Company.swift in Sources */,
 				AD3CEB9421986B220068E309 /* Defaults.swift in Sources */,
@@ -1033,6 +1065,7 @@
 				AD7CEE642069676300635817 /* SourceryProtocols.swift in Sources */,
 				AD3CEBBE21989FE70068E309 /* GetAllProjectsUseCase.swift in Sources */,
 				1223D3543E29159317E92D39 /* UseCaseFactory.swift in Sources */,
+				AD3CEBEA2198ACDF0068E309 /* DomainError.swift in Sources */,
 				AD3CEBC22198A0000068E309 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
