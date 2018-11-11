@@ -86,6 +86,8 @@
 		AD3CEC2D2198BAA40068E309 /* ObservableType+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC2B2198BAA40068E309 /* ObservableType+Data.swift */; };
 		AD3CEC2E2198BAC00068E309 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDB2063F70B0073BE60 /* RxSwift.framework */; };
 		AD3CEC312198BB220068E309 /* SourceryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7CEE612069676300635817 /* SourceryProtocols.swift */; };
+		AD3CEC332198BBCF0068E309 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC322198BBCF0068E309 /* Project.swift */; };
+		AD3CEC352198BBD60068E309 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEC342198BBD60068E309 /* Company.swift */; };
 		AD3F2D8C2066B60200989DC1 /* Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3F2D8B2066B60200989DC1 /* Layout.framework */; };
 		AD4FBED82063F5990073BE60 /* AutoCodable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD4FBED72063F5990073BE60 /* AutoCodable.stencil */; };
 		AD4FBEE02063F70B0073BE60 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDA2063F70B0073BE60 /* RxCocoa.framework */; };
@@ -246,6 +248,8 @@
 		AD3CEC262198BA920068E309 /* URLSession+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Rx.swift"; sourceTree = "<group>"; };
 		AD3CEC2A2198BAA40068E309 /* ObservableType+DomainConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+DomainConvertible.swift"; sourceTree = "<group>"; };
 		AD3CEC2B2198BAA40068E309 /* ObservableType+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+Data.swift"; sourceTree = "<group>"; };
+		AD3CEC322198BBCF0068E309 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		AD3CEC342198BBD60068E309 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		AD3F2D8B2066B60200989DC1 /* Layout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Layout.framework; path = Carthage/Build/iOS/Layout.framework; sourceTree = "<group>"; };
 		AD4FBED72063F5990073BE60 /* AutoCodable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoCodable.stencil; sourceTree = "<group>"; };
 		AD4FBED92063F70A0073BE60 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
@@ -625,6 +629,8 @@
 			isa = PBXGroup;
 			children = (
 				AD3CEC0E2198B6470068E309 /* Domain Convertible */,
+				AD3CEC322198BBCF0068E309 /* Project.swift */,
+				AD3CEC342198BBD60068E309 /* Company.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1337,8 +1343,10 @@
 				AD3CEC0D2198B5D50068E309 /* UseCaseFactory.swift in Sources */,
 				AD3CEC312198BB220068E309 /* SourceryProtocols.swift in Sources */,
 				AD3CEC282198BA920068E309 /* NetworkRequestMaker.swift in Sources */,
+				AD3CEC332198BBCF0068E309 /* Project.swift in Sources */,
 				AD3CEC292198BA920068E309 /* URLSession+Rx.swift in Sources */,
 				AD3CEC0B2198B5C90068E309 /* ProjectRepository.swift in Sources */,
+				AD3CEC352198BBD60068E309 /* Company.swift in Sources */,
 				AD3CEC102198B65B0068E309 /* DomainConvertibleType.swift in Sources */,
 				AD3CEC212198BA240068E309 /* AutoCodable.generated.swift in Sources */,
 				AD3CEC2D2198BAA40068E309 /* ObservableType+Data.swift in Sources */,

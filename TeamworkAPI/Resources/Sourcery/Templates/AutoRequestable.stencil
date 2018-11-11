@@ -80,12 +80,7 @@ struct {{type.name|replace:"Type",""}}: {{type.name}} {
             {% endif %}
             {% endif %}
             .catchError { (error) in
-                guard let networkError = error as? NetworkError else { throw error }
-                if case NetworkError.httpError(let code) = networkError, code == 401 {
-                    throw Domain.RuntimeError.sessionExpired
-                } else {
-                    throw Domain.RuntimeError.unknown
-                }
+                throw DomainError.unknown
             }
     }
 
