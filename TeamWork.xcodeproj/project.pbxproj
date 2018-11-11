@@ -51,6 +51,13 @@
 		AD3CEBC22198A0000068E309 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBC12198A0000068E309 /* Project.swift */; };
 		AD3CEBC72198A40D0068E309 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBC62198A40D0068E309 /* Company.swift */; };
 		AD3CEBC92198A4790068E309 /* AutoInitiable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD3CEBC82198A4790068E309 /* AutoInitiable.stencil */; };
+		AD3CEBD32198A5680068E309 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF3D76D2066E7F000737769 /* Domain.framework */; };
+		AD3CEBDB2198A62E0068E309 /* GetAllProjectsUseCaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBDA2198A62E0068E309 /* GetAllProjectsUseCaseSpec.swift */; };
+		AD3CEBDC2198A6510068E309 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDD2063F70B0073BE60 /* Nimble.framework */; };
+		AD3CEBDD2198A6510068E309 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDE2063F70B0073BE60 /* Quick.framework */; };
+		AD3CEBDE2198A6510068E309 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBED92063F70A0073BE60 /* RxBlocking.framework */; };
+		AD3CEBDF2198A6510068E309 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDB2063F70B0073BE60 /* RxSwift.framework */; };
+		AD3CEBE02198A6510068E309 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDC2063F70B0073BE60 /* RxTest.framework */; };
 		AD3F2D8C2066B60200989DC1 /* Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3F2D8B2066B60200989DC1 /* Layout.framework */; };
 		AD4FBED82063F5990073BE60 /* AutoCodable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD4FBED72063F5990073BE60 /* AutoCodable.stencil */; };
 		AD4FBEE02063F70B0073BE60 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDA2063F70B0073BE60 /* RxCocoa.framework */; };
@@ -75,6 +82,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AD3CEBD42198A5680068E309 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 107450CC8B312560A7EDF284 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADF3D76C2066E7F000737769;
+			remoteInfo = Domain;
+		};
 		ADF3D7802066E7F100737769 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 107450CC8B312560A7EDF284 /* Project object */;
@@ -160,6 +174,9 @@
 		AD3CEBC52198A0B10068E309 /* env.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = env.release.xcconfig; sourceTree = "<group>"; };
 		AD3CEBC62198A40D0068E309 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		AD3CEBC82198A4790068E309 /* AutoInitiable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoInitiable.stencil; sourceTree = "<group>"; };
+		AD3CEBCE2198A5680068E309 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD3CEBD92198A5970068E309 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		AD3CEBDA2198A62E0068E309 /* GetAllProjectsUseCaseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProjectsUseCaseSpec.swift; sourceTree = "<group>"; };
 		AD3F2D8B2066B60200989DC1 /* Layout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Layout.framework; path = Carthage/Build/iOS/Layout.framework; sourceTree = "<group>"; };
 		AD4FBED72063F5990073BE60 /* AutoCodable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoCodable.stencil; sourceTree = "<group>"; };
 		AD4FBED92063F70A0073BE60 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
@@ -186,6 +203,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AD3CEBCB2198A5680068E309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD3CEBDF2198A6510068E309 /* RxSwift.framework in Frameworks */,
+				AD3CEBD32198A5680068E309 /* Domain.framework in Frameworks */,
+				AD3CEBE02198A6510068E309 /* RxTest.framework in Frameworks */,
+				AD3CEBDC2198A6510068E309 /* Nimble.framework in Frameworks */,
+				AD3CEBDD2198A6510068E309 /* Quick.framework in Frameworks */,
+				AD3CEBDE2198A6510068E309 /* RxBlocking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ADF3D7692066E7F000737769 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,6 +267,7 @@
 				AD3CEBBA219881210068E309 /* UseCase.swift */,
 				1223D68FC99FE059201E8E4D /* UseCaseFactory.swift */,
 				AD3CEBBD21989FE70068E309 /* GetAllProjectsUseCase.swift */,
+				AD3CEBDA2198A62E0068E309 /* GetAllProjectsUseCaseSpec.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -527,6 +558,7 @@
 				1223D63489F449F6C181EFFA /* UseCase */,
 				ADF3D76F2066E7F000737769 /* Domain.h */,
 				ADF3D7702066E7F000737769 /* Info.plist */,
+				AD3CEBD92198A5970068E309 /* Tests-Info.plist */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -590,6 +622,7 @@
 			children = (
 				8836BA0CB6FA463EF9CC22A3 /* TeamWork.app */,
 				ADF3D76D2066E7F000737769 /* Domain.framework */,
+				AD3CEBCE2198A5680068E309 /* DomainTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -635,6 +668,25 @@
 			productReference = 8836BA0CB6FA463EF9CC22A3 /* TeamWork.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AD3CEBCD2198A5680068E309 /* DomainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD3CEBD62198A5680068E309 /* Build configuration list for PBXNativeTarget "DomainTests" */;
+			buildPhases = (
+				AD3CEBCA2198A5680068E309 /* Sources */,
+				AD3CEBCB2198A5680068E309 /* Frameworks */,
+				AD3CEBCC2198A5680068E309 /* Resources */,
+				AD3CEBE12198A6A30068E309 /* [Carthage] Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD3CEBD52198A5680068E309 /* PBXTargetDependency */,
+			);
+			name = DomainTests;
+			productName = DomainTests;
+			productReference = AD3CEBCE2198A5680068E309 /* DomainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		ADF3D76C2066E7F000737769 /* Domain */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADF3D7842066E7F100737769 /* Build configuration list for PBXNativeTarget "Domain" */;
@@ -662,10 +714,15 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = "";
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Ignus Digital";
 				TargetAttributes = {
+					AD3CEBCD2198A5680068E309 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+					};
 					ADF3D76C2066E7F000737769 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -687,6 +744,7 @@
 			targets = (
 				063568DE4120806752E029C8 /* TeamWork */,
 				ADF3D76C2066E7F000737769 /* Domain */,
+				AD3CEBCD2198A5680068E309 /* DomainTests */,
 			);
 		};
 /* End PBXProject section */
@@ -701,6 +759,13 @@
 				AD4FBED82063F5990073BE60 /* AutoCodable.stencil in Resources */,
 				8E21C3977D6EF1C9C22A792A /* Assets.xcassets in Resources */,
 				749CAA5521462D74995546CF /* Settings.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD3CEBCC2198A5680068E309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,6 +854,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TeamWork/Pods-TeamWork-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AD3CEBE12198A6A30068E309 /* [Carthage] Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Carthage] Copy Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage-copy-frameworks\n";
+		};
 		AD4FBED62063F4F90073BE60 /* [Carthage] Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -801,7 +884,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "carthage-copy-frameworks --exclude Quick.framework Nimble.framework RxTest.framework RxBlocking.framework";
+			shellScript = "carthage-copy-frameworks --exclude Quick.framework Nimble.framework RxTest.framework RxBlocking.framework\n";
 		};
 		AD7CEE3D2069652400635817 /* Sourcery */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -929,6 +1012,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AD3CEBCA2198A5680068E309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD3CEBDB2198A62E0068E309 /* GetAllProjectsUseCaseSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ADF3D7682066E7F000737769 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -949,6 +1040,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		AD3CEBD52198A5680068E309 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADF3D76C2066E7F000737769 /* Domain */;
+			targetProxy = AD3CEBD42198A5680068E309 /* PBXContainerItemProxy */;
+		};
 		ADF3D7812066E7F100737769 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = ADF3D76C2066E7F000737769 /* Domain */;
@@ -1053,6 +1149,54 @@
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
+		};
+		AD3CEBD72198A5680068E309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				INFOPLIST_FILE = "Domain/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teamwork.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD3CEBD82198A5680068E309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				INFOPLIST_FILE = "Domain/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teamwork.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		ADF3D7852066E7F100737769 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1227,6 +1371,15 @@
 			buildConfigurations = (
 				7358610E197EF4B2B137CA40 /* Debug */,
 				B44FE0D4C189396D5542BBBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD3CEBD62198A5680068E309 /* Build configuration list for PBXNativeTarget "DomainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD3CEBD72198A5680068E309 /* Debug */,
+				AD3CEBD82198A5680068E309 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
