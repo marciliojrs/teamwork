@@ -7,4 +7,5 @@ public enum DomainError: Swift.Error {
     case underlying(Swift.Error)
     case invalidModelTransform
     case itemNotFound(id: String, type: Any)
+    case validation([String: Any])
 }
