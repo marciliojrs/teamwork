@@ -10,9 +10,18 @@ enum Route {
 
 extension Route {
     private static func registerAppRoutes(in navigator: NavigatorType) {
-        navigator.register("tw://main") { (_, _, _) -> UIViewController? in
-            let viewModel = ProjectIndexViewModel(getProjectsUseCase: factory.makeGetAllProjects())
+        navigator.register("tw://projects") { (_, _, _) -> UIViewController? in
+            let viewModel = ProjectIndexViewModel(navigator: navigator,
+                                                  getProjectsUseCase: factory.makeGetAllProjects())
             let viewController = ProjectIndexViewController(viewModel: viewModel)
+            return viewController
+        }
+
+        navigator.register("tw://project/<string:id>") { (_, values, context) -> UIViewController? in
+            guard let projectId = values["id"] as? String else { return nil }
+            guard let project = context as? Project else { return nil }
+            let viewModel = ProjectDetailViewModel(project: project)
+            let viewController = ProjectDetailViewController(viewModel: viewModel)
             return viewController
         }
     }

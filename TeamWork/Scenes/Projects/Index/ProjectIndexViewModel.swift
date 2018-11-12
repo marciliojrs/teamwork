@@ -1,6 +1,7 @@
 import RxCocoa
 import RxSwift
 import Domain
+import URLNavigator
 
 struct ProjectIndexViewModel: RxViewModel {
     let input: ProjectIndexViewModel.Input
@@ -8,9 +9,12 @@ struct ProjectIndexViewModel: RxViewModel {
 
     private let bag = DisposeBag()
 
-    let getProjectsUseCase: Domain.GetAllProjectsUseCaseType
+    private let getProjectsUseCase: Domain.GetAllProjectsUseCaseType
+    private let navigator: NavigatorType
 
     // MARK: View Model Inputs & Outputs
+    //sourcery: input=Project
+    private let projectSelected = PublishSubject<Project>()
     //sourcery: output=[Project]
     private let projects = ReplaySubject<[Project]>.create(bufferSize: 1)
     //sourcery: output=Bool
@@ -19,14 +23,15 @@ struct ProjectIndexViewModel: RxViewModel {
     private let error = RxErrorTracker()
 
     // MARK: Initializer
-    init(getProjectsUseCase: Domain.GetAllProjectsUseCaseType) {
-        input = Input()
+    init(navigator: NavigatorType, getProjectsUseCase: Domain.GetAllProjectsUseCaseType) {
+        input = Input(projectSelected: projectSelected.asObserver())
         output = Output(
             projects: projects.asDriver(onErrorJustReturn: []),
             isLoading: isLoading.asDriver(),
             error: error.asDriver()
         )
 
+        self.navigator = navigator
         self.getProjectsUseCase = getProjectsUseCase
         observe()
     }
@@ -37,5 +42,9 @@ struct ProjectIndexViewModel: RxViewModel {
             .track(activity: isLoading)
             .track(error: error)
             .bind(to: projects)
+
+        bag << projectSelected.subscribe(onNext: { [navigator] (project) in
+            navigator.present("tw://project/\(project.id)", context: project)
+        })
     }
 }

@@ -27,4 +27,8 @@ final class ProjectIndexViewController: BaseViewController<ProjectIndexViewModel
             viewModel.output.projects.drive(adapter.rx.updateItems)
         ]
     }
+
+    override func bindOutlets() {
+        bag << adapter.rx.itemSelected.bind(to: viewModel.input.projectSelected)
+    }
 }

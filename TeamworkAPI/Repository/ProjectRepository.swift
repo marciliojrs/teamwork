@@ -9,7 +9,7 @@ protocol ProjectRepositoryType: Domain.ProjectRepositoryType, AutoRequestable {
     //sourcery: responseType=[TeamworkAPI.Project]
     //sourcery: domainMapping
     //sourcery: keyPath="projects"
-    //sourcery: headers=["Authorization": "Basic \("twp_k9ejP88LcuojHjmFkUFuYIUNYalg:X".base64.safe)"]
+    //sourcery: headers=["Authorization": "Basic \("twp_ocsj8PR64FIV48fHVXCy75gBruca:X".base64.safe)"]
     func all() -> Observable<[Domain.Project]>
 
     //sourcery: method="get"
@@ -17,6 +17,6 @@ protocol ProjectRepositoryType: Domain.ProjectRepositoryType, AutoRequestable {
     //sourcery: responseType=TeamworkAPI.Project
     //sourcery: domainMapping
     //sourcery: keyPath="project"
-    //sourcery: headers=["Authorization": "Basic \("twp_k9ejP88LcuojHjmFkUFuYIUNYalg:X".base64.safe)"]
+    //sourcery: headers=["Authorization": "Basic \("twp_ocsj8PR64FIV48fHVXCy75gBruca:X".base64.safe)"]
     func project(by id: String) -> Observable<Domain.Project>
 }

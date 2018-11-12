@@ -1,0 +1,8 @@
+<UIView backgroundColor="white">
+    <UIImageView
+        width="100%"
+        height="300"
+        top="0"
+        imageUrl="{image}"
+    />
+</UIView>

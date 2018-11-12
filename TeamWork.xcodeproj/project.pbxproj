@@ -108,6 +108,9 @@
 		AD7A448B2198FF2900331678 /* ProjectIndexItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A448A2198FF2900331678 /* ProjectIndexItemCell.swift */; };
 		AD7A448D2198FF3600331678 /* ProjectIndexItemCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = AD7A448C2198FF3600331678 /* ProjectIndexItemCell.xml */; };
 		AD7A448F2199188100331678 /* UINavigationBar+BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A448E2199188100331678 /* UINavigationBar+BlurEffect.swift */; };
+		AD7A44922199A40900331678 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A44912199A40900331678 /* ProjectDetailViewController.swift */; };
+		AD7A44942199A43F00331678 /* ProjectDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A44932199A43F00331678 /* ProjectDetailViewModel.swift */; };
+		AD7A44962199A44B00331678 /* ProjectDetailView.xml in Resources */ = {isa = PBXBuildFile; fileRef = AD7A44952199A44B00331678 /* ProjectDetailView.xml */; };
 		AD7CEE38206946E000635817 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDA2063F70B0073BE60 /* RxCocoa.framework */; };
 		AD7CEE39206946E000635817 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDB2063F70B0073BE60 /* RxSwift.framework */; };
 		AD7CEE59206966C800635817 /* AutoEquatable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD7CEE56206966C800635817 /* AutoEquatable.stencil */; };
@@ -285,6 +288,9 @@
 		AD7A448A2198FF2900331678 /* ProjectIndexItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIndexItemCell.swift; sourceTree = "<group>"; };
 		AD7A448C2198FF3600331678 /* ProjectIndexItemCell.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ProjectIndexItemCell.xml; sourceTree = "<group>"; };
 		AD7A448E2199188100331678 /* UINavigationBar+BlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+BlurEffect.swift"; sourceTree = "<group>"; };
+		AD7A44912199A40900331678 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
+		AD7A44932199A43F00331678 /* ProjectDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewModel.swift; sourceTree = "<group>"; };
+		AD7A44952199A44B00331678 /* ProjectDetailView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ProjectDetailView.xml; sourceTree = "<group>"; };
 		AD7CEE56206966C800635817 /* AutoEquatable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoEquatable.stencil; sourceTree = "<group>"; };
 		AD7CEE612069676300635817 /* SourceryProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryProtocols.swift; sourceTree = "<group>"; };
 		ADD0F45F2104E78A0044DCBE /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -747,6 +753,7 @@
 		AD7A447C2198FCBE00331678 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				AD7A44902199A3F500331678 /* Detail */,
 				AD7A447D2198FCC800331678 /* Index */,
 			);
 			path = Projects;
@@ -763,6 +770,16 @@
 				AD7A448C2198FF3600331678 /* ProjectIndexItemCell.xml */,
 			);
 			path = Index;
+			sourceTree = "<group>";
+		};
+		AD7A44902199A3F500331678 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				AD7A44912199A40900331678 /* ProjectDetailViewController.swift */,
+				AD7A44932199A43F00331678 /* ProjectDetailViewModel.swift */,
+				AD7A44952199A44B00331678 /* ProjectDetailView.xml */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		AD7CEE3E2069655700635817 /* Resources */ = {
@@ -1063,6 +1080,7 @@
 			files = (
 				606B55B124B388D5EE3F929A /* LaunchScreen.storyboard in Resources */,
 				AD7A44872198FE1400331678 /* ProjectIndexView.xml in Resources */,
+				AD7A44962199A44B00331678 /* ProjectDetailView.xml in Resources */,
 				AD3CEBA5219875C20068E309 /* Localizable.strings in Resources */,
 				AD4FBED82063F5990073BE60 /* AutoCodable.stencil in Resources */,
 				8E21C3977D6EF1C9C22A792A /* Assets.xcassets in Resources */,
@@ -1364,6 +1382,7 @@
 				AD7A44852198FDFF00331678 /* ProjectIndexViewController.swift in Sources */,
 				AD3CEB9021986B130068E309 /* PlistItem.swift in Sources */,
 				AD3CEB52219864DF0068E309 /* ResourceFile.swift in Sources */,
+				AD7A44922199A40900331678 /* ProjectDetailViewController.swift in Sources */,
 				AD3CEB5B2198659A0068E309 /* TranparentNavigationController.swift in Sources */,
 				AD3CEB5A2198659A0068E309 /* InternalNavigationController.swift in Sources */,
 				AD7A44892198FE7E00331678 /* ProjectListAdapter.swift in Sources */,
@@ -1374,6 +1393,7 @@
 				1223D1D4256E98066F73F372 /* ViewModelController.swift in Sources */,
 				AD739879208BD51200B6A1E4 /* AutoCodable.generated.swift in Sources */,
 				AD739877208BD51200B6A1E4 /* AutoMockable.generated.swift in Sources */,
+				AD7A44942199A43F00331678 /* ProjectDetailViewModel.swift in Sources */,
 				AD3CEB5F2198666F0068E309 /* AppTabBarController.swift in Sources */,
 				AD3CEB53219864DF0068E309 /* BaseLayoutView.swift in Sources */,
 				1223DB0C43FD3B315603EEE3 /* RxActivityTracker.swift in Sources */,

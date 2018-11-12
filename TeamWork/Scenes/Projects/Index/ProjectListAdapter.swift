@@ -3,6 +3,8 @@ import RxSwift
 import RxCocoa
 
 final class ProjectListAdapter: ListBaseAdapter<Project> {
+    fileprivate let itemSelected = PublishSubject<Project>()
+
     override func attach(listView: ListViewType?) {
         super.attach(listView: listView)
         ProjectIndexItemCell.registerIntoList(listView,
@@ -28,6 +30,11 @@ final class ProjectListAdapter: ListBaseAdapter<Project> {
 
         return cell
     }
+
+    override func listView(_ listView: ListViewType, didSelectItemAt indexPath: IndexPath) {
+        let project = items[indexPath.row]
+        itemSelected.on(.next(project))
+    }
 }
 
 extension Reactive where Base: ProjectListAdapter {
@@ -35,5 +42,9 @@ extension Reactive where Base: ProjectListAdapter {
         return Binder(self.base) { (target: ProjectListAdapter, value: [Project]) in
             target.update(items: value)
         }
+    }
+
+    var itemSelected: Observable<Project> {
+        return self.base.itemSelected
     }
 }
