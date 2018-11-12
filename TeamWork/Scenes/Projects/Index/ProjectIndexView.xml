@@ -1,0 +1,9 @@
+<UIView backgroundColor="white">
+    <UITableView
+        width="100%"
+        height="100%"
+        outlet="tableView"
+        separatorStyle="none"
+        contentInset.bottom="16"
+    />
+</UIView>
