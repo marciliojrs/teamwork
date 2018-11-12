@@ -7,6 +7,7 @@ struct ProjectDetailViewModel: RxViewModel {
     let output: ProjectDetailViewModel.Output
 
     private let bag = DisposeBag()
+    let projectId: String
 
     // MARK: View Model Inputs & Outputs
     //sourcery: output=Project
@@ -17,6 +18,7 @@ struct ProjectDetailViewModel: RxViewModel {
         input = Input()
         output = Output(project: self.project.asDriver(onErrorDriveWith: .empty()))
 
+        projectId = project.id
         self.project.on(.next(project))
 
         observe()

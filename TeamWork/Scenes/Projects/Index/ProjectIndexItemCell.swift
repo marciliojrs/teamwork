@@ -1,9 +1,12 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Hero
 
 final class ProjectIndexItemCell: UITableViewCell {
-    @objc private var containerView: UIView!
+    @objc private weak var containerView: UIView!
+    @objc private weak var cardView: UIView!
+    @objc private weak var logoImageView: UIImageView!
 
     private var isTouched: Bool = false {
         didSet {
@@ -32,6 +35,11 @@ final class ProjectIndexItemCell: UITableViewCell {
                                  state: state,
                                  constants: constants ?? [:],
                                  forCellReuseIdentifier: reuseIdentifier)
+    }
+
+    func setupHeroConstraints(for projectId: String) {
+        cardView.hero.id = "card\(projectId)"
+        cardView.hero.modifiers = [.spring(stiffness: 250, damping: 25)]
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

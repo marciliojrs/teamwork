@@ -111,6 +111,7 @@
 		AD7A44922199A40900331678 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A44912199A40900331678 /* ProjectDetailViewController.swift */; };
 		AD7A44942199A43F00331678 /* ProjectDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A44932199A43F00331678 /* ProjectDetailViewModel.swift */; };
 		AD7A44962199A44B00331678 /* ProjectDetailView.xml in Resources */ = {isa = PBXBuildFile; fileRef = AD7A44952199A44B00331678 /* ProjectDetailView.xml */; };
+		AD7A44982199F17800331678 /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7A44972199F17700331678 /* Hero.framework */; };
 		AD7CEE38206946E000635817 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDA2063F70B0073BE60 /* RxCocoa.framework */; };
 		AD7CEE39206946E000635817 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDB2063F70B0073BE60 /* RxSwift.framework */; };
 		AD7CEE59206966C800635817 /* AutoEquatable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD7CEE56206966C800635817 /* AutoEquatable.stencil */; };
@@ -291,6 +292,7 @@
 		AD7A44912199A40900331678 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		AD7A44932199A43F00331678 /* ProjectDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewModel.swift; sourceTree = "<group>"; };
 		AD7A44952199A44B00331678 /* ProjectDetailView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ProjectDetailView.xml; sourceTree = "<group>"; };
+		AD7A44972199F17700331678 /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = Carthage/Build/iOS/Hero.framework; sourceTree = "<group>"; };
 		AD7CEE56206966C800635817 /* AutoEquatable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoEquatable.stencil; sourceTree = "<group>"; };
 		AD7CEE612069676300635817 /* SourceryProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryProtocols.swift; sourceTree = "<group>"; };
 		ADD0F45F2104E78A0044DCBE /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 				AD3CEBFE2198B4AB0068E309 /* TeamworkAPI.framework in Frameworks */,
 				44669B05A37E2B637F886B08 /* Foundation.framework in Frameworks */,
 				92D9EB70CC8B60C1C361455C /* Pods_TeamWork.framework in Frameworks */,
+				AD7A44982199F17800331678 /* Hero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -856,6 +859,7 @@
 		C356B459C2B39B1494623458 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD7A44972199F17700331678 /* Hero.framework */,
 				AD3F2D8B2066B60200989DC1 /* Layout.framework */,
 				AD4FBEDD2063F70B0073BE60 /* Nimble.framework */,
 				AD4FBEDE2063F70B0073BE60 /* Quick.framework */,

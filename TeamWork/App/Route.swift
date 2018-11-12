@@ -22,6 +22,7 @@ extension Route {
             guard let project = context as? Project else { return nil }
             let viewModel = ProjectDetailViewModel(project: project)
             let viewController = ProjectDetailViewController(viewModel: viewModel)
+
             return viewController
         }
     }

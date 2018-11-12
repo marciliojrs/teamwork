@@ -1,8 +1,68 @@
 <UIView backgroundColor="white">
-    <UIImageView
+    <macro name="GRID" value="16"/>
+
+    <UIVisualEffectView
+        effect="UIBlurEffect(light)"
+        height="100%"
+        outlet="visualEffectView"
         width="100%"
-        height="300"
-        top="0"
-        imageUrl="{image}"
     />
+    <UIScrollView
+        alwaysBounceVertical="false"
+        contentInsetAdjustmentBehavior="never"
+        outlet="scrollView"
+        backgroundColor="white"
+        scrollIndicatorInsets.bottom="parent.safeAreaInsets.bottom"
+        scrollIndicatorInsets.top="parent.safeAreaInsets.top"
+        top="0">
+
+        <UIView
+            backgroundColor="white"
+            height="auto"
+            outlet="cardView"
+            width="100%">
+
+            <UIImageView
+                contentMode="scaleAspectFill"
+                height="300"
+                imageUrl="{image}"
+                top="0"
+                width="100%"
+            />
+            <UIView
+                backgroundColor="rgba(0, 0, 0, 0.5)"
+                height="auto + GRID / 2"
+                top="parent.top"
+                width="100%">
+
+                <UIVisualEffectView
+                    effect="UIBlurEffect(light)"
+                    height="100%"
+                    width="100%"
+                />
+                <UILabel
+                    center.x="parent.center.x"
+                    font="{theme.font.title3.bold}"
+                    height="auto"
+                    text="{name}"
+                    textColor="white"
+                    top="GRID / 2"
+                />
+            </UIView>
+        </UIView>
+        <UIView
+            backgroundColor="white"
+            height="auto + GRID"
+            outlet="contentView"
+            top="previous.bottom + GRID">
+
+            <UILabel
+                height="auto"
+                left="GRID"
+                numberOfLines="0"
+                right="parent.right - GRID"
+                text="{description}"
+            />
+        </UIView>
+    </UIScrollView>
 </UIView>

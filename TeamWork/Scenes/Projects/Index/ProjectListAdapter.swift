@@ -16,11 +16,12 @@ final class ProjectListAdapter: ListBaseAdapter<Project> {
     }
 
     override func listView(_ listView: ListViewType, cellForItemAt indexPath: IndexPath) -> ListViewItemType {
+        let project = items[indexPath.row]
         let node = listView.dequeueReusableCellNode(withIdentifier: "ProjectIndexItemCell", for: indexPath)
         //swiftlint:disable:next force_cast
         let cell = node.view as! ProjectIndexItemCell
 
-        let project = items[indexPath.row]
+        cell.setupHeroConstraints(for: project.id)
         node.setState([
             "name": project.name,
             "image": project.logo,
