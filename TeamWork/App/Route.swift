@@ -11,8 +11,8 @@ enum Route {
 extension Route {
     private static func registerAppRoutes(in navigator: NavigatorType) {
         navigator.register("tw://main") { (_, _, _) -> UIViewController? in
-            let viewController = UIViewController()
-            viewController.view.backgroundColor = .blue
+            let viewModel = ProjectIndexViewModel(getProjectsUseCase: factory.makeGetAllProjects())
+            let viewController = ProjectIndexViewController(viewModel: viewModel)
             return viewController
         }
     }

@@ -99,6 +99,14 @@
 		AD739878208BD51200B6A1E4 /* AutoEquatable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD739875208BD51200B6A1E4 /* AutoEquatable.generated.swift */; };
 		AD739879208BD51200B6A1E4 /* AutoCodable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD739876208BD51200B6A1E4 /* AutoCodable.generated.swift */; };
 		AD73987B208BD62000B6A1E4 /* AutoEquatable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73987A208BD61F00B6A1E4 /* AutoEquatable.generated.swift */; };
+		AD7A447F2198FD4400331678 /* RxViewModel.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD7A447E2198FD4400331678 /* RxViewModel.stencil */; };
+		AD7A44812198FDB900331678 /* RxViewModel.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A44802198FDB800331678 /* RxViewModel.generated.swift */; };
+		AD7A44832198FDF300331678 /* ProjectIndexViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A44822198FDF300331678 /* ProjectIndexViewModel.swift */; };
+		AD7A44852198FDFF00331678 /* ProjectIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A44842198FDFF00331678 /* ProjectIndexViewController.swift */; };
+		AD7A44872198FE1400331678 /* ProjectIndexView.xml in Resources */ = {isa = PBXBuildFile; fileRef = AD7A44862198FE1400331678 /* ProjectIndexView.xml */; };
+		AD7A44892198FE7E00331678 /* ProjectListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A44882198FE7E00331678 /* ProjectListAdapter.swift */; };
+		AD7A448B2198FF2900331678 /* ProjectIndexItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A448A2198FF2900331678 /* ProjectIndexItemCell.swift */; };
+		AD7A448D2198FF3600331678 /* ProjectIndexItemCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = AD7A448C2198FF3600331678 /* ProjectIndexItemCell.xml */; };
 		AD7CEE38206946E000635817 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDA2063F70B0073BE60 /* RxCocoa.framework */; };
 		AD7CEE39206946E000635817 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDB2063F70B0073BE60 /* RxSwift.framework */; };
 		AD7CEE59206966C800635817 /* AutoEquatable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD7CEE56206966C800635817 /* AutoEquatable.stencil */; };
@@ -267,6 +275,14 @@
 		AD739875208BD51200B6A1E4 /* AutoEquatable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatable.generated.swift; sourceTree = "<group>"; };
 		AD739876208BD51200B6A1E4 /* AutoCodable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCodable.generated.swift; sourceTree = "<group>"; };
 		AD73987A208BD61F00B6A1E4 /* AutoEquatable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatable.generated.swift; sourceTree = "<group>"; };
+		AD7A447E2198FD4400331678 /* RxViewModel.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RxViewModel.stencil; sourceTree = "<group>"; };
+		AD7A44802198FDB800331678 /* RxViewModel.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewModel.generated.swift; sourceTree = "<group>"; };
+		AD7A44822198FDF300331678 /* ProjectIndexViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIndexViewModel.swift; sourceTree = "<group>"; };
+		AD7A44842198FDFF00331678 /* ProjectIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIndexViewController.swift; sourceTree = "<group>"; };
+		AD7A44862198FE1400331678 /* ProjectIndexView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ProjectIndexView.xml; sourceTree = "<group>"; };
+		AD7A44882198FE7E00331678 /* ProjectListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListAdapter.swift; sourceTree = "<group>"; };
+		AD7A448A2198FF2900331678 /* ProjectIndexItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIndexItemCell.swift; sourceTree = "<group>"; };
+		AD7A448C2198FF3600331678 /* ProjectIndexItemCell.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ProjectIndexItemCell.xml; sourceTree = "<group>"; };
 		AD7CEE56206966C800635817 /* AutoEquatable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoEquatable.stencil; sourceTree = "<group>"; };
 		AD7CEE612069676300635817 /* SourceryProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryProtocols.swift; sourceTree = "<group>"; };
 		ADD0F45F2104E78A0044DCBE /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -348,6 +364,7 @@
 		1223D5050261EAE61BBB7975 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AD7A447C2198FCBE00331678 /* Projects */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -446,6 +463,7 @@
 				79BF8A67E8ABF126B7A02893 /* AutoEquatable.stencil */,
 				799130B1388CD1B59E368C21 /* AutoMockable.stencil */,
 				AD4FBED72063F5990073BE60 /* AutoCodable.stencil */,
+				AD7A447E2198FD4400331678 /* RxViewModel.stencil */,
 			);
 			path = SourceryTemplates;
 			sourceTree = "<group>";
@@ -723,6 +741,27 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		AD7A447C2198FCBE00331678 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				AD7A447D2198FCC800331678 /* Index */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		AD7A447D2198FCC800331678 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				AD7A44822198FDF300331678 /* ProjectIndexViewModel.swift */,
+				AD7A44842198FDFF00331678 /* ProjectIndexViewController.swift */,
+				AD7A44862198FE1400331678 /* ProjectIndexView.xml */,
+				AD7A44882198FE7E00331678 /* ProjectListAdapter.swift */,
+				AD7A448A2198FF2900331678 /* ProjectIndexItemCell.swift */,
+				AD7A448C2198FF3600331678 /* ProjectIndexItemCell.xml */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
 		AD7CEE3E2069655700635817 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -837,6 +876,7 @@
 				AD739876208BD51200B6A1E4 /* AutoCodable.generated.swift */,
 				AD739875208BD51200B6A1E4 /* AutoEquatable.generated.swift */,
 				AD739874208BD51200B6A1E4 /* AutoMockable.generated.swift */,
+				AD7A44802198FDB800331678 /* RxViewModel.generated.swift */,
 			);
 			path = Sourcery;
 			sourceTree = "<group>";
@@ -1016,10 +1056,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				606B55B124B388D5EE3F929A /* LaunchScreen.storyboard in Resources */,
+				AD7A44872198FE1400331678 /* ProjectIndexView.xml in Resources */,
 				AD3CEBA5219875C20068E309 /* Localizable.strings in Resources */,
 				AD4FBED82063F5990073BE60 /* AutoCodable.stencil in Resources */,
 				8E21C3977D6EF1C9C22A792A /* Assets.xcassets in Resources */,
+				AD7A448D2198FF3600331678 /* ProjectIndexItemCell.xml in Resources */,
 				749CAA5521462D74995546CF /* Settings.bundle in Resources */,
+				AD7A447F2198FD4400331678 /* RxViewModel.stencil in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1066,6 +1109,7 @@
 				"$(SRCROOT)/TeamWork/Resources/Generated/Sourcery/AutoCodable.generated.swift",
 				"$(SRCROOT)/TeamWork/Resources/Generated/Sourcery/AutoEquatable.generated.swift",
 				"$(SRCROOT)/TeamWork/Resources/Generated/Sourcery/AutoMockable.generated.swift",
+				"$(SRCROOT)/TeamWork/Resources/Generated/Sourcery/RxViewModel.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1292,6 +1336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD3CEB9121986B130068E309 /* Plist.swift in Sources */,
+				AD7A448B2198FF2900331678 /* ProjectIndexItemCell.swift in Sources */,
 				AD3CEB9221986B130068E309 /* Defaults.swift in Sources */,
 				AD3CEB592198659A0068E309 /* ExternalNavigationController.swift in Sources */,
 				EF2911B840A2D94611C1C886 /* AppDelegate.swift in Sources */,
@@ -1309,11 +1354,14 @@
 				AD3CEB50219864DF0068E309 /* BaseViewController.swift in Sources */,
 				1223DA8CDC539E5A50DCA8A7 /* RxViewModel.swift in Sources */,
 				AD3CEB4F219864DF0068E309 /* BaseAdapter.swift in Sources */,
+				AD7A44852198FDFF00331678 /* ProjectIndexViewController.swift in Sources */,
 				AD3CEB9021986B130068E309 /* PlistItem.swift in Sources */,
 				AD3CEB52219864DF0068E309 /* ResourceFile.swift in Sources */,
 				AD3CEB5B2198659A0068E309 /* TranparentNavigationController.swift in Sources */,
 				AD3CEB5A2198659A0068E309 /* InternalNavigationController.swift in Sources */,
+				AD7A44892198FE7E00331678 /* ProjectListAdapter.swift in Sources */,
 				AD3CEB87219867D50068E309 /* UIImageView+Layout.swift in Sources */,
+				AD7A44832198FDF300331678 /* ProjectIndexViewModel.swift in Sources */,
 				AD3CEB9F219874020068E309 /* LoadingView.swift in Sources */,
 				AD3CEB51219864DF0068E309 /* LayoutLoading+Constants.swift in Sources */,
 				1223D1D4256E98066F73F372 /* ViewModelController.swift in Sources */,
@@ -1322,6 +1370,7 @@
 				AD3CEB5F2198666F0068E309 /* AppTabBarController.swift in Sources */,
 				AD3CEB53219864DF0068E309 /* BaseLayoutView.swift in Sources */,
 				1223DB0C43FD3B315603EEE3 /* RxActivityTracker.swift in Sources */,
+				AD7A44812198FDB900331678 /* RxViewModel.generated.swift in Sources */,
 				1223DE2AEAA2466ADDB9DB35 /* Appearance.swift in Sources */,
 				AD3CEB89219867E10068E309 /* UIAlertController+Rx.swift in Sources */,
 				AD3CEB5D219865E90068E309 /* Route.swift in Sources */,
