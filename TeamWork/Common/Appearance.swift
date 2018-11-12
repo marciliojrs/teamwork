@@ -30,7 +30,7 @@ struct Appearance {
         transparentNavBar.backgroundColor = .clear
         transparentNavBar.setBackgroundImage(UIImage(), for: .default)
         transparentNavBar.shadowImage = UIImage()
-        transparentNavBar.prefersLargeTitles = false
+        transparentNavBar.prefersLargeTitles = true
 
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]

@@ -107,6 +107,7 @@
 		AD7A44892198FE7E00331678 /* ProjectListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A44882198FE7E00331678 /* ProjectListAdapter.swift */; };
 		AD7A448B2198FF2900331678 /* ProjectIndexItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A448A2198FF2900331678 /* ProjectIndexItemCell.swift */; };
 		AD7A448D2198FF3600331678 /* ProjectIndexItemCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = AD7A448C2198FF3600331678 /* ProjectIndexItemCell.xml */; };
+		AD7A448F2199188100331678 /* UINavigationBar+BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A448E2199188100331678 /* UINavigationBar+BlurEffect.swift */; };
 		AD7CEE38206946E000635817 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDA2063F70B0073BE60 /* RxCocoa.framework */; };
 		AD7CEE39206946E000635817 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDB2063F70B0073BE60 /* RxSwift.framework */; };
 		AD7CEE59206966C800635817 /* AutoEquatable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD7CEE56206966C800635817 /* AutoEquatable.stencil */; };
@@ -283,6 +284,7 @@
 		AD7A44882198FE7E00331678 /* ProjectListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListAdapter.swift; sourceTree = "<group>"; };
 		AD7A448A2198FF2900331678 /* ProjectIndexItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIndexItemCell.swift; sourceTree = "<group>"; };
 		AD7A448C2198FF3600331678 /* ProjectIndexItemCell.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ProjectIndexItemCell.xml; sourceTree = "<group>"; };
+		AD7A448E2199188100331678 /* UINavigationBar+BlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+BlurEffect.swift"; sourceTree = "<group>"; };
 		AD7CEE56206966C800635817 /* AutoEquatable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoEquatable.stencil; sourceTree = "<group>"; };
 		AD7CEE612069676300635817 /* SourceryProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryProtocols.swift; sourceTree = "<group>"; };
 		ADD0F45F2104E78A0044DCBE /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -549,6 +551,7 @@
 				AD3CEB88219867E10068E309 /* UIAlertController+Rx.swift */,
 				AD3CEBA2219874650068E309 /* UIImagePickerController+Rx.swift */,
 				AD3CEB86219867D50068E309 /* UIImageView+Layout.swift */,
+				AD7A448E2199188100331678 /* UINavigationBar+BlurEffect.swift */,
 				AD3CEB84219867C90068E309 /* UINavigationController+StatusBarAppearance.swift */,
 				AD3CEBA0219874280068E309 /* UIViewController+Modal.swift */,
 				AD3CEB82219867BE0068E309 /* UIViewController+Rx.swift */,
@@ -1342,6 +1345,7 @@
 				EF2911B840A2D94611C1C886 /* AppDelegate.swift in Sources */,
 				AD3CEC372198C36F0068E309 /* Global.swift in Sources */,
 				2F2E17FC4302A67442B3E537 /* TestsAppDelegate.swift in Sources */,
+				AD7A448F2199188100331678 /* UINavigationBar+BlurEffect.swift in Sources */,
 				AD7CEE622069676300635817 /* SourceryProtocols.swift in Sources */,
 				AD3CEBA3219874650068E309 /* UIImagePickerController+Rx.swift in Sources */,
 				AD3CEB9321986B130068E309 /* Platform.swift in Sources */,

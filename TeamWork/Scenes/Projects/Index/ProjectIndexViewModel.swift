@@ -36,7 +36,6 @@ struct ProjectIndexViewModel: RxViewModel {
         bag << getProjectsUseCase.execute().asObservable()
             .track(activity: isLoading)
             .track(error: error)
-            .debug()
             .bind(to: projects)
     }
 }
