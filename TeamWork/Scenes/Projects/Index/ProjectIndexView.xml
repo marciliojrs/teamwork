@@ -4,5 +4,6 @@
         height="100%"
         outlet="tableView"
         separatorStyle="none"
+        contentInset.bottom="16"
     />
 </UIView>
