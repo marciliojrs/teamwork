@@ -39,7 +39,6 @@ struct ProjectIndexViewModel: RxViewModel {
     // MARK: Methods
     private func observe() {
         bag << getProjectsUseCase.execute().asObservable()
-            .debug()
             .track(activity: isLoading)
             .track(error: error)
             .subscribe(onNext: projects.onNext)

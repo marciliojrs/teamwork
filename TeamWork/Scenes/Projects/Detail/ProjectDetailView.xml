@@ -55,7 +55,10 @@
                     numberOfLines="0"
                     right="parent.right - GRID * 3"
                     text="{name}"
-                    textColor="{titleColor}"
+                    textColor="white"
+                    layer.shadowColor="black"
+                    layer.shadowOpacity="0.7"
+                    layer.shadowOffset.height="1"
                     top="parent.safeAreaInsets.top + GRID / 2"
                 />
             </UIView>
@@ -76,24 +79,23 @@
         </UIView>
     </UIScrollView>
     <UIView
-        backgroundColor="clear"
-        center.y="#labelContainer.center.y + GRID"
-        height="36"
+        backgroundColor="rgba(0,0,0,0.2)"
+        top="GRID"
+        height="24"
         layer.cornerRadius="width / 2"
         layer.masksToBounds="true"
         right="parent.right - GRID"
-        width="36"
-        isHidden="true">
+        width="24">
 
         <UIButton
             center.x="parent.center.x"
             center.y="parent.center.y"
-            height="24"
+            height="12"
             image="close"
             outlet="closeButton"
-            tintColor="black"
+            tintColor="white"
             type="system"
-            width="24"
+            width="12"
         />
     </UIView>
 </UIView>

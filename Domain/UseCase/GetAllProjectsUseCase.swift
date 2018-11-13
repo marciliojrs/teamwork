@@ -23,10 +23,10 @@ public struct GetAllProjectsUseCase: GetAllProjectsUseCaseType {
     public func execute() -> Single<[Project]> {
         return repository.all()
             .map { (all) -> [Project] in
-                let grouped = all.categorise { $0.status }
+                let grouped = all.group { $0.status }.sorted(by: { $0.0.order < $1.0.order })
                 let array = grouped.compactMap { (_, value) -> [Project] in
                     value.sorted { $0.name.compare($1.name) == .orderedAscending }
-                }.reversed().flatMap { $0 }
+                }.flatMap { $0 }
 
                 return array
             }.asSingle()
@@ -34,13 +34,7 @@ public struct GetAllProjectsUseCase: GetAllProjectsUseCaseType {
 }
 
 extension Sequence {
-    func categorise<U: Hashable>(_ key: (Iterator.Element) -> U) -> [U: [Iterator.Element]] {
-        var dict: [U: [Iterator.Element]] = [:]
-        for element in self {
-            let key = key(element)
-            if case nil = dict[key]?.append(element) { dict[key] = [element] }
-        }
-
-        return dict
+    func group<U: Hashable>(by key: (Iterator.Element) -> U) -> [U: [Iterator.Element]] {
+        return Dictionary.init(grouping: self, by: key)
     }
 }

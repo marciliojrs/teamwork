@@ -47,7 +47,10 @@
                     numberOfLines="0"
                     right="parent.right - GRID"
                     text="{name}"
-                    textColor="{titleColor}"
+                    textColor="white"
+                    layer.shadowColor="black"
+                    layer.shadowOpacity="0.7"
+                    layer.shadowOffset.height="1"
                     top="GRID / 2"
                 />
             </UIView>

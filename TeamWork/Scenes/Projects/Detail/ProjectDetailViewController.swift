@@ -8,7 +8,7 @@ final class ProjectDetailViewController: BaseViewController<ProjectDetailViewMod
     override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation { return .slide }
 
     override var initialViewState: ViewState {
-        return ["name": "", "image": nil, "description": "", "titleColor": UIColor.black]
+        return ["name": "", "image": nil, "description": ""]
     }
 
     @objc private weak var cardView: UIView!
@@ -66,6 +66,7 @@ final class ProjectDetailViewController: BaseViewController<ProjectDetailViewMod
         cardView.hero.id = "card\(projectId)"
         cardView.hero.modifiers = [.spring(stiffness: 250, damping: 25)]
         visualEffectView.hero.modifiers = [.fade]
+        closeButton.superview?.hero.modifiers = [.fade]
         scrollView.hero.modifiers = [.source(heroID: "card\(projectId)"),
                                      .spring(stiffness: 250, damping: 25)]
     }

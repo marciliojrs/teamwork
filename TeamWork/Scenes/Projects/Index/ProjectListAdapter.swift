@@ -12,8 +12,7 @@ final class ProjectListAdapter: ListBaseAdapter<Project> {
                                                       "image": nil,
                                                       "company.name": "",
                                                       "description": "",
-                                                      "status.title": "",
-                                                      "titleColor": UIColor.black],
+                                                      "status.title": ""],
                                               reuseIdentifier: "ProjectIndexItemCell")
     }
 
@@ -29,7 +28,6 @@ final class ProjectListAdapter: ListBaseAdapter<Project> {
             "image": project.logo ?? nil,
             "company.name": project.company.name,
             "description": project.description,
-            "titleColor": UIColor.black,
             "status.title": project.status.rawValue.uppercased()
         ])
 
