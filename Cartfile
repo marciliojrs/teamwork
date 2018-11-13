@@ -3,3 +3,4 @@ github "Quick/Quick" ~> 1.2
 github "Quick/Nimble" ~> 7.0
 github "schibsted/Layout" ~> 0.6
 github "HeroTransitions/Hero"
+github "RxSwiftCommunity/RxGesture"

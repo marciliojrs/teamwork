@@ -1,4 +1,7 @@
-<UIView backgroundColor="white">
+<UIView
+    backgroundColor="clear"
+    id="view">
+
     <macro name="GRID" value="16"/>
 
     <UIVisualEffectView
@@ -9,52 +12,58 @@
     />
     <UIScrollView
         alwaysBounceVertical="false"
+        backgroundColor="clear"
         contentInsetAdjustmentBehavior="never"
+        id="scrollView"
         outlet="scrollView"
-        backgroundColor="white"
         scrollIndicatorInsets.bottom="parent.safeAreaInsets.bottom"
         scrollIndicatorInsets.top="parent.safeAreaInsets.top"
         top="0">
 
         <UIView
             backgroundColor="white"
+            height="#view.height"
+            width="100%"
+        />
+        <UIView
+            backgroundColor="clear"
             height="auto"
+            id="cardView"
             outlet="cardView"
+            top="0"
             width="100%">
 
-            <UIImageView
+            <TWKImageView
                 contentMode="scaleAspectFill"
                 height="300"
                 imageUrl="{image}"
+                outlet="logoImageView"
                 top="0"
                 width="100%"
             />
             <UIView
-                backgroundColor="rgba(0, 0, 0, 0.5)"
                 height="auto + GRID / 2"
-                top="parent.top"
+                id="labelContainer"
+                top="0"
                 width="100%">
 
-                <UIVisualEffectView
-                    effect="UIBlurEffect(light)"
-                    height="100%"
-                    width="100%"
-                />
                 <UILabel
-                    center.x="parent.center.x"
-                    font="{theme.font.title3.bold}"
+                    font="{theme.font.title1.bold} 36"
                     height="auto"
+                    left="GRID"
+                    numberOfLines="0"
+                    right="parent.right - GRID"
                     text="{name}"
-                    textColor="white"
-                    top="GRID / 2"
+                    textColor="{titleColor}"
+                    top="parent.safeAreaInsets.top + GRID / 2"
                 />
             </UIView>
         </UIView>
         <UIView
-            backgroundColor="white"
+            backgroundColor="clear"
             height="auto + GRID"
             outlet="contentView"
-            top="previous.bottom + GRID">
+            top="#cardView.bottom + GRID">
 
             <UILabel
                 height="auto"
@@ -65,4 +74,25 @@
             />
         </UIView>
     </UIScrollView>
+    <UIView
+        backgroundColor="clear"
+        center.y="#labelContainer.center.y + GRID"
+        height="36"
+        layer.cornerRadius="width / 2"
+        layer.masksToBounds="true"
+        right="parent.right - GRID"
+        width="36"
+        isHidden="true">
+
+        <UIButton
+            center.x="parent.center.x"
+            center.y="parent.center.y"
+            height="24"
+            image="close"
+            outlet="closeButton"
+            tintColor="black"
+            type="system"
+            width="24"
+        />
+    </UIView>
 </UIView>

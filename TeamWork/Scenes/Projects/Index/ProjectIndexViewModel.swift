@@ -44,9 +44,7 @@ struct ProjectIndexViewModel: RxViewModel {
             .bind(to: projects)
 
         bag << projectSelected.subscribe(onNext: { [navigator] (project) in
-            navigator.present("tw://project/\(project.id)",
-                              context: project,
-                              wrap: TransparentNavigationController.self)
+            navigator.present("tw://project/\(project.id)", context: project)
         })
     }
 }

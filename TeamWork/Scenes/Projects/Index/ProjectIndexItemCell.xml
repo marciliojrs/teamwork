@@ -13,9 +13,9 @@
         layer.shadowOpacity="0.3"
         layer.shadowRadius="5"
         left="GRID"
+        outlet="containerView"
         right="parent.right - GRID"
-        top="GRID"
-        outlet="containerView">
+        top="GRID">
 
         <UIView
             backgroundColor="white"
@@ -25,32 +25,29 @@
             outlet="cardView"
             width="100%">
 
-            <UIImageView
-                id="image"
+            <TWKImageView
                 clipsToBounds="true"
                 contentMode="scaleAspectFill"
                 height="300"
+                id="image"
                 imageUrl="{image}"
+                outlet="logoImageView"
                 top="0"
                 width="100%"
-                outlet="logoImageView"
             />
             <UIView
-                backgroundColor="rgba(0, 0, 0, 0.5)"
                 height="auto + GRID / 2"
                 top="parent.top"
                 width="100%">
-                <UIVisualEffectView
-                    height="100%"
-                    width="100%"
-                    effect="UIBlurEffect(light)"
-                />
+
                 <UILabel
-                    font="{theme.font.title3.bold}"
+                    font="{theme.font.title1.bold} 36"
                     height="auto"
-                    center.x="parent.center.x"
+                    left="GRID"
+                    numberOfLines="0"
+                    right="parent.right - GRID"
                     text="{name}"
-                    textColor="white"
+                    textColor="{titleColor}"
                     top="GRID / 2"
                 />
             </UIView>
@@ -66,8 +63,8 @@
                     numberOfLines="2"
                     right="parent.right - GRID"
                     text="{company.name}"
-                    top="previous.bottom + GRID / 2"
                     textColor="white"
+                    top="previous.bottom + GRID / 2"
                 />
                 <UILabel
                     font="{theme.font.footnote}"
@@ -75,8 +72,8 @@
                     numberOfLines="2"
                     right="parent.right - GRID / 2"
                     text="{description}"
-                    top="previous.bottom + GRID / 4"
                     textColor="white"
+                    top="previous.bottom + GRID / 4"
                 />
             </UIView>
         </UIView>

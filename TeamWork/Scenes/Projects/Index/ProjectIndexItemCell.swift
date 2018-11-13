@@ -4,9 +4,15 @@ import RxCocoa
 import Hero
 
 final class ProjectIndexItemCell: UITableViewCell {
+    private(set) var bag = DisposeBag()
     @objc private weak var containerView: UIView!
     @objc private weak var cardView: UIView!
-    @objc private weak var logoImageView: UIImageView!
+    @objc private weak var logoImageView: TWKImageView!
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        bag = DisposeBag()
+    }
 
     private var isTouched: Bool = false {
         didSet {
@@ -23,6 +29,10 @@ final class ProjectIndexItemCell: UITableViewCell {
                 }, completion: nil
             )
         }
+    }
+
+    var primaryColor: Observable<UIColor?> {
+        return logoImageView.rx.observe(UIColor.self, "primaryColor")
     }
 
     public static func registerIntoList(_ listView: ListViewType?,

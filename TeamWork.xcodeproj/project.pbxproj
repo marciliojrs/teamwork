@@ -112,6 +112,9 @@
 		AD7A44942199A43F00331678 /* ProjectDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A44932199A43F00331678 /* ProjectDetailViewModel.swift */; };
 		AD7A44962199A44B00331678 /* ProjectDetailView.xml in Resources */ = {isa = PBXBuildFile; fileRef = AD7A44952199A44B00331678 /* ProjectDetailView.xml */; };
 		AD7A44982199F17800331678 /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7A44972199F17700331678 /* Hero.framework */; };
+		AD7A449A219AEB3B00331678 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7A4499219AEB3B00331678 /* RxGesture.framework */; };
+		AD7A449C219AF81600331678 /* UIColor+BrightnessAjustedColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A449B219AF81600331678 /* UIColor+BrightnessAjustedColor.swift */; };
+		AD7A449F219AF8EE00331678 /* UIImage+DominantColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A449E219AF8EE00331678 /* UIImage+DominantColors.swift */; };
 		AD7CEE38206946E000635817 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDA2063F70B0073BE60 /* RxCocoa.framework */; };
 		AD7CEE39206946E000635817 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDB2063F70B0073BE60 /* RxSwift.framework */; };
 		AD7CEE59206966C800635817 /* AutoEquatable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD7CEE56206966C800635817 /* AutoEquatable.stencil */; };
@@ -293,6 +296,9 @@
 		AD7A44932199A43F00331678 /* ProjectDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewModel.swift; sourceTree = "<group>"; };
 		AD7A44952199A44B00331678 /* ProjectDetailView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ProjectDetailView.xml; sourceTree = "<group>"; };
 		AD7A44972199F17700331678 /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = Carthage/Build/iOS/Hero.framework; sourceTree = "<group>"; };
+		AD7A4499219AEB3B00331678 /* RxGesture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxGesture.framework; path = Carthage/Build/iOS/RxGesture.framework; sourceTree = "<group>"; };
+		AD7A449B219AF81600331678 /* UIColor+BrightnessAjustedColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+BrightnessAjustedColor.swift"; sourceTree = "<group>"; };
+		AD7A449E219AF8EE00331678 /* UIImage+DominantColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+DominantColors.swift"; sourceTree = "<group>"; };
 		AD7CEE56206966C800635817 /* AutoEquatable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoEquatable.stencil; sourceTree = "<group>"; };
 		AD7CEE612069676300635817 /* SourceryProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryProtocols.swift; sourceTree = "<group>"; };
 		ADD0F45F2104E78A0044DCBE /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -350,6 +356,7 @@
 				ADF3D7822066E7F100737769 /* Domain.framework in Frameworks */,
 				AD3CEB9D219871790068E309 /* RxAtomic.framework in Frameworks */,
 				AD3CEBFE2198B4AB0068E309 /* TeamworkAPI.framework in Frameworks */,
+				AD7A449A219AEB3B00331678 /* RxGesture.framework in Frameworks */,
 				44669B05A37E2B637F886B08 /* Foundation.framework in Frameworks */,
 				92D9EB70CC8B60C1C361455C /* Pods_TeamWork.framework in Frameworks */,
 				AD7A44982199F17800331678 /* Hero.framework in Frameworks */,
@@ -564,6 +571,8 @@
 				AD3CEB84219867C90068E309 /* UINavigationController+StatusBarAppearance.swift */,
 				AD3CEBA0219874280068E309 /* UIViewController+Modal.swift */,
 				AD3CEB82219867BE0068E309 /* UIViewController+Rx.swift */,
+				AD7A449B219AF81600331678 /* UIColor+BrightnessAjustedColor.swift */,
+				AD7A449E219AF8EE00331678 /* UIImage+DominantColors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -866,6 +875,7 @@
 				AD3CEB9C219871790068E309 /* RxAtomic.framework */,
 				AD4FBED92063F70A0073BE60 /* RxBlocking.framework */,
 				AD4FBEDA2063F70B0073BE60 /* RxCocoa.framework */,
+				AD7A4499219AEB3B00331678 /* RxGesture.framework */,
 				AD4FBEDB2063F70B0073BE60 /* RxSwift.framework */,
 				AD4FBEDC2063F70B0073BE60 /* RxTest.framework */,
 				549FE0DEAA78B09E7ECB7E6E /* iOS */,
@@ -1393,9 +1403,11 @@
 				AD3CEB87219867D50068E309 /* UIImageView+Layout.swift in Sources */,
 				AD7A44832198FDF300331678 /* ProjectIndexViewModel.swift in Sources */,
 				AD3CEB9F219874020068E309 /* LoadingView.swift in Sources */,
+				AD7A449F219AF8EE00331678 /* UIImage+DominantColors.swift in Sources */,
 				AD3CEB51219864DF0068E309 /* LayoutLoading+Constants.swift in Sources */,
 				1223D1D4256E98066F73F372 /* ViewModelController.swift in Sources */,
 				AD739879208BD51200B6A1E4 /* AutoCodable.generated.swift in Sources */,
+				AD7A449C219AF81600331678 /* UIColor+BrightnessAjustedColor.swift in Sources */,
 				AD739877208BD51200B6A1E4 /* AutoMockable.generated.swift in Sources */,
 				AD7A44942199A43F00331678 /* ProjectDetailViewModel.swift in Sources */,
 				AD3CEB5F2198666F0068E309 /* AppTabBarController.swift in Sources */,

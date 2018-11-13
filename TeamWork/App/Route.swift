@@ -18,9 +18,9 @@ extension Route {
         }
 
         navigator.register("tw://project/<string:id>") { (_, values, context) -> UIViewController? in
-            guard let projectId = values["id"] as? String else { return nil }
+//            guard let projectId = values["id"] as? String else { return nil }
             guard let project = context as? Project else { return nil }
-            let viewModel = ProjectDetailViewModel(project: project)
+            let viewModel = ProjectDetailViewModel(navigator: navigator, project: project)
             let viewController = ProjectDetailViewController(viewModel: viewModel)
 
             return viewController
