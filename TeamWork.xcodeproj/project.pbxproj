@@ -957,13 +957,11 @@
 				B0C43AEBC98224EC9B989995 /* R.swift */,
 				060D7EECF9FE4868CECEA1B7 /* Swiftlint */,
 				04A71041B9081A9CD853CF28 /* Sourcery */,
-				7E84B41CFB7653602B12354D /* Tag Icons */,
 				3030BC08DE5157A5C8DDC44E /* Sources */,
 				DBAA4E47EE21A7A356474C2E /* Frameworks */,
 				1E1A962BA7D190B19E19F062 /* Resources */,
 				AD4FBED62063F4F90073BE60 /* [Carthage] Copy Frameworks */,
 				8A83958945C5348C43910B10 /* [CP] Embed Pods Frameworks */,
-				CF0278C6675D1C29F0131C04 /* Restore Icons */,
 			);
 			buildRules = (
 			);
@@ -1189,20 +1187,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7E84B41CFB7653602B12354D /* Tag Icons */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Tag Icons";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"$CONFIGURATION\" != \"Release\" ] ; then\n${SRCROOT}/scripts/tag_icons.sh tag ${SRCROOT}/${PROJECT_NAME}/Resources/Assets.xcassets/AppIcon.appiconset\nfi";
-		};
 		8A83958945C5348C43910B10 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1333,20 +1317,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		CF0278C6675D1C29F0131C04 /* Restore Icons */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Restore Icons";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"$CONFIGURATION\" != \"Release\" ] ; then\n${SRCROOT}/scripts/tag_icons.sh cleanup ${SRCROOT}/${PROJECT_NAME}/Resources/Assets.xcassets/AppIcon.appiconset\nfi";
 		};
 		DFADB19D37D4BBC177BE9D59 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

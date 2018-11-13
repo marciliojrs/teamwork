@@ -2,8 +2,11 @@ import UIKit
 import Hero
 import RxGesture
 
-final class ProjectDetailViewController: BaseViewController<ProjectDetailViewModel>, UIGestureRecognizerDelegate {
+final class ProjectDetailViewController: BaseViewController<ProjectDetailViewModel> {
     override var layout: LayoutFile? { return R.file.projectDetailViewXml }
+    override var prefersStatusBarHidden: Bool { return true }
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation { return .slide }
+
     override var initialViewState: ViewState {
         return ["name": "", "image": nil, "description": "", "titleColor": UIColor.black]
     }
@@ -15,19 +18,10 @@ final class ProjectDetailViewController: BaseViewController<ProjectDetailViewMod
     @objc private weak var closeButton: UIButton!
     @objc private weak var logoImageView: TWKImageView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        hero.isEnabled = true
-        hero.modalAnimationType = .none
-
-        setupHero(for: viewModel.projectId)
-
-        let gesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan(gesture:)))
-        gesture.delegate = self
-        scrollView.addGestureRecognizer(gesture)
-    }
-
     override func layoutLoad() {
+        setupHero(for: viewModel.projectId)
+        setupPanGestureToDismiss()
+
         bag << logoImageView.rx.observe(UIColor.self, "primaryColor")
             .map { (primaryColor) in ["titleColor": (primaryColor ?? .black).brightnessAdjustedColor] }
             .bind(to: rx.state)
@@ -36,9 +30,33 @@ final class ProjectDetailViewController: BaseViewController<ProjectDetailViewMod
             viewModel.output.project.map {
                 ["name": $0.name,
                  "image": $0.logo,
-                 "description": "\($0.description)\n\($0.description)\n\($0.description)"]
+                 "description": $0.description]
             }.drive(rx.state)
         ]
+    }
+
+    private func setupPanGestureToDismiss() {
+        let panGesture = scrollView.rx.panGesture { [scrollView] (_, delegate) in
+            delegate.beginPolicy = .custom { _ in scrollView!.contentOffset.y <= 0 }
+            delegate.simultaneousRecognitionPolicy = .always
+        }.share(replay: 1, scope: .whileConnected)
+
+        bag << panGesture.subscribe(onNext: { [unowned self] (gesture) in
+            let translation = gesture.translation(in: self.view)
+            switch gesture.state {
+            case .began:
+                self.dismiss(animated: true, completion: nil)
+            case .changed:
+                Hero.shared.update(translation.y / self.view.bounds.height)
+            default:
+                let velocity = gesture.velocity(in: self.view)
+                if ((translation.y + velocity.y) / self.view.bounds.height) > 0.5 {
+                    Hero.shared.finish()
+                } else {
+                    Hero.shared.cancel()
+                }
+            }
+        })
     }
 
     override func bindOutlets() {
@@ -46,36 +64,13 @@ final class ProjectDetailViewController: BaseViewController<ProjectDetailViewMod
     }
 
     private func setupHero(for projectId: String) {
+        hero.isEnabled = true
+        hero.modalAnimationType = .none
+
         cardView.hero.id = "card\(projectId)"
         cardView.hero.modifiers = [.spring(stiffness: 250, damping: 25)]
         visualEffectView.hero.modifiers = [.fade]
         scrollView.hero.modifiers = [.source(heroID: "card\(projectId)"),
                                      .spring(stiffness: 250, damping: 25)]
-    }
-
-    @objc func handlePan(gesture: UIPanGestureRecognizer) {
-        let translation = gesture.translation(in: view)
-        switch gesture.state {
-        case .began:
-            dismiss(animated: true, completion: nil)
-        case .changed:
-            Hero.shared.update(translation.y / view.bounds.height)
-        default:
-            let velocity = gesture.velocity(in: view)
-            if ((translation.y + velocity.y) / view.bounds.height) > 0.5 {
-                Hero.shared.finish()
-            } else {
-                Hero.shared.cancel()
-            }
-        }
-    }
-
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        return scrollView.contentOffset.y <= 0
-    }
-
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
-                           shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        return true
     }
 }
