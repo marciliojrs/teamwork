@@ -9,7 +9,7 @@ struct Project: AutoCodable, AutoEquatable {
     let id: String
     let starred: Bool
     let status: Project.Status
-    let logo: URL
+    let logo: String?
     let name: String
     let description: String
     let company: Company
@@ -27,7 +27,7 @@ extension Project: DomainConvertibleType {
         self.name = domain.name
         self.id = domain.id
         self.starred = domain.starred
-        self.logo = domain.logo
+        self.logo = domain.logo?.absoluteString
         self.description = domain.description
         self.company = domain.company.encoded
         self.status = Project.Status(rawValue: domain.status.rawValue)!
@@ -38,7 +38,7 @@ extension Project: DomainConvertibleType {
             id: id,
             starred: starred,
             status: Domain.Project.Status(rawValue: status.rawValue)!,
-            logo: logo,
+            logo: logo != nil ? URL(string: logo!) : nil,
             name: name,
             description: description,
             company: company.asDomain()

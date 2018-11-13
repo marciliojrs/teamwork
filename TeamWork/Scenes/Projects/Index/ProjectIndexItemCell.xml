@@ -1,5 +1,5 @@
 <ProjectIndexItemCell
-    height="auto"
+    height="auto + GRID"
     selectionStyle="none">
 
     <macro name="GRID" value="16"/>

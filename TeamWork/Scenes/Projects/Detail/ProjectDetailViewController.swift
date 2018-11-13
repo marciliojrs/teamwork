@@ -22,10 +22,6 @@ final class ProjectDetailViewController: BaseViewController<ProjectDetailViewMod
         setupHero(for: viewModel.projectId)
         setupPanGestureToDismiss()
 
-        bag << logoImageView.rx.observe(UIColor.self, "primaryColor")
-            .map { (primaryColor) in ["titleColor": (primaryColor ?? .black).brightnessAdjustedColor] }
-            .bind(to: rx.state)
-
         bag << [
             viewModel.output.project.map {
                 ["name": $0.name,

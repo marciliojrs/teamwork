@@ -27,6 +27,7 @@
         />
         <UIView
             backgroundColor="clear"
+            layer.masksToBounds="true"
             height="auto"
             id="cardView"
             outlet="cardView"
@@ -52,7 +53,7 @@
                     height="auto"
                     left="GRID"
                     numberOfLines="0"
-                    right="parent.right - GRID"
+                    right="parent.right - GRID * 3"
                     text="{name}"
                     textColor="{titleColor}"
                     top="parent.safeAreaInsets.top + GRID / 2"

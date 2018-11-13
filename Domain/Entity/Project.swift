@@ -7,7 +7,7 @@ public struct Project: AutoEquatable {
     public let id: String
     public let starred: Bool
     public let status: Project.Status
-    public let logo: URL
+    public let logo: URL?
     public let name: String
     public let description: String
     public let company: Company
@@ -25,7 +25,7 @@ public struct Project: AutoEquatable {
 // sourcery:inline:auto:Project.AutoInit
 // swiftlint:disable superfluous_disable_command
 // swiftlint:disable:next line_length
-    public init(id: String, starred: Bool, status: Project.Status, logo: URL, name: String, description: String, company: Company) {
+    public init(id: String, starred: Bool, status: Project.Status, logo: URL?, name: String, description: String, company: Company) {
         self.id = id
         self.starred = starred
         self.status = status

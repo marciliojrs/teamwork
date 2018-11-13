@@ -44,9 +44,16 @@ class TWKImageView: UIImageView {
     open override func setValue(_ value: Any, forExpression name: String) throws {
         switch name {
         case "imageUrl":
-            self.kf.setImage(with: value as? URL, completionHandler: { (image, _, _, _) in
+            self.kf.setImage(with: value as? URL,
+                             placeholder: R.image.placeholder(),
+                             completionHandler: { (image, _, _, _) in
                 if let image = image {
-                    self.primaryColor = image.getColors().primary
+                    DispatchQueue.global().async {
+                        let colors = image.getColors()
+                        DispatchQueue.main.async {
+                            self.primaryColor = colors.secondary
+                        }
+                    }
                 }
             })
         default:
