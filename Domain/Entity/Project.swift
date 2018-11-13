@@ -1,7 +1,17 @@
 //sourcery: AutoInit
 public struct Project: AutoEquatable {
     public enum Status: String {
-        case all, active, archived, current, late, completed
+        case active, archived, current, late, completed
+
+        var order: Int {
+            switch self {
+            case .active: return 1
+            case .archived: return 2
+            case .current: return 3
+            case .late: return 4
+            case .completed: return 5
+            }
+        }
     }
 
     public let id: String

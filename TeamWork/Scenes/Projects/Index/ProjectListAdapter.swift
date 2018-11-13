@@ -12,6 +12,7 @@ final class ProjectListAdapter: ListBaseAdapter<Project> {
                                                       "image": nil,
                                                       "company.name": "",
                                                       "description": "",
+                                                      "status.title": "",
                                                       "titleColor": UIColor.black],
                                               reuseIdentifier: "ProjectIndexItemCell")
     }
@@ -25,10 +26,11 @@ final class ProjectListAdapter: ListBaseAdapter<Project> {
         cell.setupHeroConstraints(for: project.id)
         node.setState([
             "name": project.name,
-            "image": project.logo,
+            "image": project.logo ?? nil,
             "company.name": project.company.name,
             "description": project.description,
-            "titleColor": UIColor.black
+            "titleColor": UIColor.black,
+            "status.title": project.status.rawValue.uppercased()
         ])
 
         return cell

@@ -51,6 +51,18 @@
                     top="GRID / 2"
                 />
             </UIView>
+            <UILabel
+                backgroundColor="orange"
+                bottom="next.top - GRID / 2"
+                font="{theme.font.footnote}"
+                height="auto + GRID / 2"
+                layer.cornerRadius="10"
+                layer.masksToBounds="true"
+                left="GRID / 2"
+                text="{status.title}"
+                textAlignment="center"
+                width="auto + GRID"
+            />
             <UIView
                 backgroundColor="rgba(0, 0, 0, 0.5)"
                 bottom="#image.bottom"
