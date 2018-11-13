@@ -108,6 +108,13 @@
 		AD7A448B2198FF2900331678 /* ProjectIndexItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A448A2198FF2900331678 /* ProjectIndexItemCell.swift */; };
 		AD7A448D2198FF3600331678 /* ProjectIndexItemCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = AD7A448C2198FF3600331678 /* ProjectIndexItemCell.xml */; };
 		AD7A448F2199188100331678 /* UINavigationBar+BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A448E2199188100331678 /* UINavigationBar+BlurEffect.swift */; };
+		AD7A44922199A40900331678 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A44912199A40900331678 /* ProjectDetailViewController.swift */; };
+		AD7A44942199A43F00331678 /* ProjectDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A44932199A43F00331678 /* ProjectDetailViewModel.swift */; };
+		AD7A44962199A44B00331678 /* ProjectDetailView.xml in Resources */ = {isa = PBXBuildFile; fileRef = AD7A44952199A44B00331678 /* ProjectDetailView.xml */; };
+		AD7A44982199F17800331678 /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7A44972199F17700331678 /* Hero.framework */; };
+		AD7A449A219AEB3B00331678 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7A4499219AEB3B00331678 /* RxGesture.framework */; };
+		AD7A449C219AF81600331678 /* UIColor+BrightnessAjustedColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A449B219AF81600331678 /* UIColor+BrightnessAjustedColor.swift */; };
+		AD7A449F219AF8EE00331678 /* UIImage+DominantColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A449E219AF8EE00331678 /* UIImage+DominantColors.swift */; };
 		AD7CEE38206946E000635817 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDA2063F70B0073BE60 /* RxCocoa.framework */; };
 		AD7CEE39206946E000635817 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDB2063F70B0073BE60 /* RxSwift.framework */; };
 		AD7CEE59206966C800635817 /* AutoEquatable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AD7CEE56206966C800635817 /* AutoEquatable.stencil */; };
@@ -285,6 +292,13 @@
 		AD7A448A2198FF2900331678 /* ProjectIndexItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIndexItemCell.swift; sourceTree = "<group>"; };
 		AD7A448C2198FF3600331678 /* ProjectIndexItemCell.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ProjectIndexItemCell.xml; sourceTree = "<group>"; };
 		AD7A448E2199188100331678 /* UINavigationBar+BlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+BlurEffect.swift"; sourceTree = "<group>"; };
+		AD7A44912199A40900331678 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
+		AD7A44932199A43F00331678 /* ProjectDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewModel.swift; sourceTree = "<group>"; };
+		AD7A44952199A44B00331678 /* ProjectDetailView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ProjectDetailView.xml; sourceTree = "<group>"; };
+		AD7A44972199F17700331678 /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = Carthage/Build/iOS/Hero.framework; sourceTree = "<group>"; };
+		AD7A4499219AEB3B00331678 /* RxGesture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxGesture.framework; path = Carthage/Build/iOS/RxGesture.framework; sourceTree = "<group>"; };
+		AD7A449B219AF81600331678 /* UIColor+BrightnessAjustedColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+BrightnessAjustedColor.swift"; sourceTree = "<group>"; };
+		AD7A449E219AF8EE00331678 /* UIImage+DominantColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+DominantColors.swift"; sourceTree = "<group>"; };
 		AD7CEE56206966C800635817 /* AutoEquatable.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoEquatable.stencil; sourceTree = "<group>"; };
 		AD7CEE612069676300635817 /* SourceryProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryProtocols.swift; sourceTree = "<group>"; };
 		ADD0F45F2104E78A0044DCBE /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -342,8 +356,10 @@
 				ADF3D7822066E7F100737769 /* Domain.framework in Frameworks */,
 				AD3CEB9D219871790068E309 /* RxAtomic.framework in Frameworks */,
 				AD3CEBFE2198B4AB0068E309 /* TeamworkAPI.framework in Frameworks */,
+				AD7A449A219AEB3B00331678 /* RxGesture.framework in Frameworks */,
 				44669B05A37E2B637F886B08 /* Foundation.framework in Frameworks */,
 				92D9EB70CC8B60C1C361455C /* Pods_TeamWork.framework in Frameworks */,
+				AD7A44982199F17800331678 /* Hero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +571,8 @@
 				AD3CEB84219867C90068E309 /* UINavigationController+StatusBarAppearance.swift */,
 				AD3CEBA0219874280068E309 /* UIViewController+Modal.swift */,
 				AD3CEB82219867BE0068E309 /* UIViewController+Rx.swift */,
+				AD7A449B219AF81600331678 /* UIColor+BrightnessAjustedColor.swift */,
+				AD7A449E219AF8EE00331678 /* UIImage+DominantColors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -747,6 +765,7 @@
 		AD7A447C2198FCBE00331678 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				AD7A44902199A3F500331678 /* Detail */,
 				AD7A447D2198FCC800331678 /* Index */,
 			);
 			path = Projects;
@@ -763,6 +782,16 @@
 				AD7A448C2198FF3600331678 /* ProjectIndexItemCell.xml */,
 			);
 			path = Index;
+			sourceTree = "<group>";
+		};
+		AD7A44902199A3F500331678 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				AD7A44912199A40900331678 /* ProjectDetailViewController.swift */,
+				AD7A44932199A43F00331678 /* ProjectDetailViewModel.swift */,
+				AD7A44952199A44B00331678 /* ProjectDetailView.xml */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		AD7CEE3E2069655700635817 /* Resources */ = {
@@ -839,12 +868,14 @@
 		C356B459C2B39B1494623458 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD7A44972199F17700331678 /* Hero.framework */,
 				AD3F2D8B2066B60200989DC1 /* Layout.framework */,
 				AD4FBEDD2063F70B0073BE60 /* Nimble.framework */,
 				AD4FBEDE2063F70B0073BE60 /* Quick.framework */,
 				AD3CEB9C219871790068E309 /* RxAtomic.framework */,
 				AD4FBED92063F70A0073BE60 /* RxBlocking.framework */,
 				AD4FBEDA2063F70B0073BE60 /* RxCocoa.framework */,
+				AD7A4499219AEB3B00331678 /* RxGesture.framework */,
 				AD4FBEDB2063F70B0073BE60 /* RxSwift.framework */,
 				AD4FBEDC2063F70B0073BE60 /* RxTest.framework */,
 				549FE0DEAA78B09E7ECB7E6E /* iOS */,
@@ -926,13 +957,11 @@
 				B0C43AEBC98224EC9B989995 /* R.swift */,
 				060D7EECF9FE4868CECEA1B7 /* Swiftlint */,
 				04A71041B9081A9CD853CF28 /* Sourcery */,
-				7E84B41CFB7653602B12354D /* Tag Icons */,
 				3030BC08DE5157A5C8DDC44E /* Sources */,
 				DBAA4E47EE21A7A356474C2E /* Frameworks */,
 				1E1A962BA7D190B19E19F062 /* Resources */,
 				AD4FBED62063F4F90073BE60 /* [Carthage] Copy Frameworks */,
 				8A83958945C5348C43910B10 /* [CP] Embed Pods Frameworks */,
-				CF0278C6675D1C29F0131C04 /* Restore Icons */,
 			);
 			buildRules = (
 			);
@@ -1063,6 +1092,7 @@
 			files = (
 				606B55B124B388D5EE3F929A /* LaunchScreen.storyboard in Resources */,
 				AD7A44872198FE1400331678 /* ProjectIndexView.xml in Resources */,
+				AD7A44962199A44B00331678 /* ProjectDetailView.xml in Resources */,
 				AD3CEBA5219875C20068E309 /* Localizable.strings in Resources */,
 				AD4FBED82063F5990073BE60 /* AutoCodable.stencil in Resources */,
 				8E21C3977D6EF1C9C22A792A /* Assets.xcassets in Resources */,
@@ -1156,20 +1186,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		7E84B41CFB7653602B12354D /* Tag Icons */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Tag Icons";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"$CONFIGURATION\" != \"Release\" ] ; then\n${SRCROOT}/scripts/tag_icons.sh tag ${SRCROOT}/${PROJECT_NAME}/Resources/Assets.xcassets/AppIcon.appiconset\nfi";
 		};
 		8A83958945C5348C43910B10 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1302,20 +1318,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CF0278C6675D1C29F0131C04 /* Restore Icons */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Restore Icons";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"$CONFIGURATION\" != \"Release\" ] ; then\n${SRCROOT}/scripts/tag_icons.sh cleanup ${SRCROOT}/${PROJECT_NAME}/Resources/Assets.xcassets/AppIcon.appiconset\nfi";
-		};
 		DFADB19D37D4BBC177BE9D59 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1364,16 +1366,20 @@
 				AD7A44852198FDFF00331678 /* ProjectIndexViewController.swift in Sources */,
 				AD3CEB9021986B130068E309 /* PlistItem.swift in Sources */,
 				AD3CEB52219864DF0068E309 /* ResourceFile.swift in Sources */,
+				AD7A44922199A40900331678 /* ProjectDetailViewController.swift in Sources */,
 				AD3CEB5B2198659A0068E309 /* TranparentNavigationController.swift in Sources */,
 				AD3CEB5A2198659A0068E309 /* InternalNavigationController.swift in Sources */,
 				AD7A44892198FE7E00331678 /* ProjectListAdapter.swift in Sources */,
 				AD3CEB87219867D50068E309 /* UIImageView+Layout.swift in Sources */,
 				AD7A44832198FDF300331678 /* ProjectIndexViewModel.swift in Sources */,
 				AD3CEB9F219874020068E309 /* LoadingView.swift in Sources */,
+				AD7A449F219AF8EE00331678 /* UIImage+DominantColors.swift in Sources */,
 				AD3CEB51219864DF0068E309 /* LayoutLoading+Constants.swift in Sources */,
 				1223D1D4256E98066F73F372 /* ViewModelController.swift in Sources */,
 				AD739879208BD51200B6A1E4 /* AutoCodable.generated.swift in Sources */,
+				AD7A449C219AF81600331678 /* UIColor+BrightnessAjustedColor.swift in Sources */,
 				AD739877208BD51200B6A1E4 /* AutoMockable.generated.swift in Sources */,
+				AD7A44942199A43F00331678 /* ProjectDetailViewModel.swift in Sources */,
 				AD3CEB5F2198666F0068E309 /* AppTabBarController.swift in Sources */,
 				AD3CEB53219864DF0068E309 /* BaseLayoutView.swift in Sources */,
 				1223DB0C43FD3B315603EEE3 /* RxActivityTracker.swift in Sources */,

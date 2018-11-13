@@ -1,9 +1,18 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Hero
 
 final class ProjectIndexItemCell: UITableViewCell {
-    @objc private var containerView: UIView!
+    private(set) var bag = DisposeBag()
+    @objc private weak var containerView: UIView!
+    @objc private weak var cardView: UIView!
+    @objc private weak var logoImageView: TWKImageView!
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        bag = DisposeBag()
+    }
 
     private var isTouched: Bool = false {
         didSet {
@@ -22,6 +31,10 @@ final class ProjectIndexItemCell: UITableViewCell {
         }
     }
 
+    var primaryColor: Observable<UIColor?> {
+        return logoImageView.rx.observe(UIColor.self, "primaryColor")
+    }
+
     public static func registerIntoList(_ listView: ListViewType?,
                                         state: ViewState,
                                         constants: [String: Any]? = nil,
@@ -32,6 +45,11 @@ final class ProjectIndexItemCell: UITableViewCell {
                                  state: state,
                                  constants: constants ?? [:],
                                  forCellReuseIdentifier: reuseIdentifier)
+    }
+
+    func setupHeroConstraints(for projectId: String) {
+        cardView.hero.id = "card\(projectId)"
+        cardView.hero.modifiers = [.spring(stiffness: 250, damping: 25)]
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

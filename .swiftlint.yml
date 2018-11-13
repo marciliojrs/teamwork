@@ -4,6 +4,7 @@ disabled_rules:
 excluded: # paths to ignore during linting. Takes precedence over `included`.    
   - Pods 
   - Carthage   
+  - TeamWork/Common/Extensions/UIImage+DominantColors.swift
   - TeamWork/Resources/Generated/R/R.generated.swift  
   - TeamWork/Resources/Generated/Sourcery/*.generated.swift
   - Domain/Resources/Generated/Sourcery/*.generated.swift
