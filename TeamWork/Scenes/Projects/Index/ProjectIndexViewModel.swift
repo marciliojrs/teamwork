@@ -41,7 +41,7 @@ struct ProjectIndexViewModel: RxViewModel {
         bag << getProjectsUseCase.execute().asObservable()
             .track(activity: isLoading)
             .track(error: error)
-            .bind(to: projects)
+            .subscribe(onNext: projects.onNext)
 
         bag << projectSelected.subscribe(onNext: { [navigator] (project) in
             navigator.present("tw://project/\(project.id)", context: project)

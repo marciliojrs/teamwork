@@ -12,7 +12,7 @@ final class ProjectListAdapter: ListBaseAdapter<Project> {
                                                       "image": nil,
                                                       "company.name": "",
                                                       "description": "",
-                                                      "titleColor": UIColor.black],
+                                                      "status.title": ""],
                                               reuseIdentifier: "ProjectIndexItemCell")
     }
 
@@ -23,15 +23,12 @@ final class ProjectListAdapter: ListBaseAdapter<Project> {
         let cell = node.view as! ProjectIndexItemCell
 
         cell.setupHeroConstraints(for: project.id)
-        cell.bag << cell.primaryColor
-            .map { ($0 ?? .black).brightnessAdjustedColor }
-            .subscribe(onNext: { node.setState(["titleColor": $0]) })
-
         node.setState([
             "name": project.name,
-            "image": project.logo,
+            "image": project.logo ?? nil,
             "company.name": project.company.name,
-            "description": project.description
+            "description": project.description,
+            "status.title": project.status.rawValue.uppercased()
         ])
 
         return cell

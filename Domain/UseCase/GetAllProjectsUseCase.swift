@@ -21,6 +21,20 @@ public struct GetAllProjectsUseCase: GetAllProjectsUseCaseType {
     }
 
     public func execute() -> Single<[Project]> {
-        return repository.all().asSingle()
+        return repository.all()
+            .map { (all) -> [Project] in
+                let grouped = all.group { $0.status }.sorted(by: { $0.0.order < $1.0.order })
+                let array = grouped.compactMap { (_, value) -> [Project] in
+                    value.sorted { $0.name.compare($1.name) == .orderedAscending }
+                }.flatMap { $0 }
+
+                return array
+            }.asSingle()
+    }
+}
+
+extension Sequence {
+    func group<U: Hashable>(by key: (Iterator.Element) -> U) -> [U: [Iterator.Element]] {
+        return Dictionary.init(grouping: self, by: key)
     }
 }
