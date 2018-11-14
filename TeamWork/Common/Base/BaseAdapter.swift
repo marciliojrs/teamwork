@@ -57,6 +57,7 @@ UITableViewDelegate, UITableViewDataSource {
         (listView as? UICollectionView)?.delegate = self
     }
 
+    @nonobjc
     open func numberOfSectionsInListView(_ listView: ListViewType) -> Int {
         return 1
     }

@@ -1491,7 +1491,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamwork.marcilio;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1623,7 +1623,7 @@
 			baseConfigurationReference = EF3AEDFC2765F8470CD8125E /* Pods-TeamworkAPI.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1658,7 +1658,7 @@
 			baseConfigurationReference = 0FD2D15E6FF0B6B010FAC369 /* Pods-TeamworkAPI.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1838,7 +1838,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamwork.marcilio;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
