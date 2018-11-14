@@ -1,9 +1,18 @@
 <UIView backgroundColor="white">
     <UITableView
-        width="100%"
+        contentInset.bottom="16"
         height="100%"
         outlet="tableView"
         separatorStyle="none"
-        contentInset.bottom="16"
+        width="100%"
+    />
+    <NVActivityIndicatorView.NVActivityIndicatorView
+        center.x="parent.center.x"
+        center.y="parent.center.y"
+        color="black"
+        height="36"
+        outlet="indicatorView"
+        width="36"
+        activityType="ballPulse"
     />
 </UIView>

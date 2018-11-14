@@ -1,6 +1,5 @@
 import UIKit
 import URLNavigator
-import IQKeyboardManagerSwift
 import struct Layout.LayoutConsole
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,8 +29,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupAppearanceAndUiTools() {
         Appearance.install()
         LayoutConsole.isEnabled = true
-
-        IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.enableAutoToolbar = false
     }
 }

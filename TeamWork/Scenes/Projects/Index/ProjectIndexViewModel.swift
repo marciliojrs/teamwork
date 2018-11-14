@@ -39,6 +39,7 @@ struct ProjectIndexViewModel: RxViewModel {
     // MARK: Methods
     private func observe() {
         bag << getProjectsUseCase.execute().asObservable()
+            .delay(10, scheduler: MainScheduler.instance)
             .track(activity: isLoading)
             .track(error: error)
             .subscribe(onNext: projects.onNext)

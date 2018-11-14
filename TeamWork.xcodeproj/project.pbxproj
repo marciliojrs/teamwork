@@ -21,6 +21,7 @@
 		8E21C3977D6EF1C9C22A792A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450E27E37D92A67F2764E645 /* Assets.xcassets */; };
 		92D9EB70CC8B60C1C361455C /* Pods_TeamWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915B91E00684A74974793850 /* Pods_TeamWork.framework */; };
 		A545FB3D060BC8CAAA6FFB49 /* Pods_TeamworkAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7503D0682BC8516002BDDDB /* Pods_TeamworkAPI.framework */; };
+		AD271E71219C9A05001F875B /* NVActivityIndicatorView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD271E70219C9A05001F875B /* NVActivityIndicatorView+Layout.swift */; };
 		AD3CEB4F219864DF0068E309 /* BaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEB4A219864DF0068E309 /* BaseAdapter.swift */; };
 		AD3CEB50219864DF0068E309 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEB4B219864DF0068E309 /* BaseViewController.swift */; };
 		AD3CEB51219864DF0068E309 /* LayoutLoading+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEB4C219864DF0068E309 /* LayoutLoading+Constants.swift */; };
@@ -198,6 +199,7 @@
 		8836BA0CB6FA463EF9CC22A3 /* TeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		915B91E00684A74974793850 /* Pods_TeamWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D62DDDD5686D82CF43957AB /* Pods_Domain_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD271E70219C9A05001F875B /* NVActivityIndicatorView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NVActivityIndicatorView+Layout.swift"; sourceTree = "<group>"; };
 		AD3CEB4A219864DF0068E309 /* BaseAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAdapter.swift; sourceTree = "<group>"; };
 		AD3CEB4B219864DF0068E309 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AD3CEB4C219864DF0068E309 /* LayoutLoading+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LayoutLoading+Constants.swift"; sourceTree = "<group>"; };
@@ -573,6 +575,7 @@
 				AD3CEB82219867BE0068E309 /* UIViewController+Rx.swift */,
 				AD7A449B219AF81600331678 /* UIColor+BrightnessAjustedColor.swift */,
 				AD7A449E219AF8EE00331678 /* UIImage+DominantColors.swift */,
+				AD271E70219C9A05001F875B /* NVActivityIndicatorView+Layout.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1194,20 +1197,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TeamWork/Pods-TeamWork-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/QuickLayout/QuickLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftEntryKit/SwiftEntryKit.framework",
 				"${BUILT_PRODUCTS_DIR}/URLNavigator/URLNavigator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuickLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEntryKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URLNavigator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1376,6 +1375,7 @@
 				AD7A449F219AF8EE00331678 /* UIImage+DominantColors.swift in Sources */,
 				AD3CEB51219864DF0068E309 /* LayoutLoading+Constants.swift in Sources */,
 				1223D1D4256E98066F73F372 /* ViewModelController.swift in Sources */,
+				AD271E71219C9A05001F875B /* NVActivityIndicatorView+Layout.swift in Sources */,
 				AD739879208BD51200B6A1E4 /* AutoCodable.generated.swift in Sources */,
 				AD7A449C219AF81600331678 /* UIColor+BrightnessAjustedColor.swift in Sources */,
 				AD739877208BD51200B6A1E4 /* AutoMockable.generated.swift in Sources */,
