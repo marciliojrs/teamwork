@@ -3,7 +3,6 @@ import RxCocoa
 import Layout
 import Domain
 import Foundation
-import IQKeyboardManagerSwift
 
 typealias ViewState = [String: Any?]
 typealias LayoutConstants = [String: Any]
@@ -90,8 +89,6 @@ class BaseViewController<T: RxViewModel>: UIViewController, ViewModelController,
     }
 
     override func viewWillDisappear(_ animated: Bool) {
-        IQKeyboardManager.shared.keyboardDistanceFromTextField = 10
-
         super.viewWillDisappear(animated)
 
         if prefersNavigationTransparent {

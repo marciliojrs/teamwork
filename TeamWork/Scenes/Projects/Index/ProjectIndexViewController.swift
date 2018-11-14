@@ -1,4 +1,5 @@
 import UIKit
+import NVActivityIndicatorView
 
 final class ProjectIndexViewController: BaseViewController<ProjectIndexViewModel> {
     override var layout: LayoutFile? { return R.file.projectIndexViewXml }
@@ -6,6 +7,8 @@ final class ProjectIndexViewController: BaseViewController<ProjectIndexViewModel
     override var prefersStatusBarHidden: Bool { return statusBarShoudBeHidden }
 
     @objc private weak var tableView: UITableView!
+    @objc private weak var indicatorView: NVActivityIndicatorView!
+
     private let adapter = ProjectListAdapter()
     private var statusBarShoudBeHidden = false {
         didSet {
@@ -39,7 +42,10 @@ final class ProjectIndexViewController: BaseViewController<ProjectIndexViewModel
     override func layoutLoad() {
         adapter.attach(listView: tableView)
         bag << [
-            viewModel.output.projects.drive(adapter.rx.updateItems)
+            viewModel.output.projects.drive(adapter.rx.updateItems),
+            viewModel.output.isLoading.drive(onNext: { [indicatorView] (isLoading) in
+                isLoading ? indicatorView?.startAnimating() : indicatorView?.stopAnimating()
+            })
         ]
     }
 

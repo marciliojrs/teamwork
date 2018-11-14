@@ -12,9 +12,8 @@ target 'TeamWork' do
   shared_pods
   pod 'R.swift', '5.0.0.alpha.2'
   pod 'URLNavigator'
-  pod 'IQKeyboardManagerSwift'
   pod 'Kingfisher', '~> 4.10.0'
-  pod 'SwiftEntryKit', '0.8.4'
+  pod 'NVActivityIndicatorView'
 end
 
 target 'Domain' do
