@@ -25,7 +25,7 @@ final class ProjectListAdapter: ListBaseAdapter<Project> {
         cell.setupHeroConstraints(for: project.id)
         node.setState([
             "name": project.name,
-            "image": project.logo ?? nil,
+            "image": project.logo as Any,
             "company.name": project.company.name,
             "description": project.description,
             "status.title": project.status.rawValue.uppercased()
