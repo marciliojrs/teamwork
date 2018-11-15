@@ -13,18 +13,20 @@ struct ProjectIndexViewModel: RxViewModel {
     private let navigator: NavigatorType
 
     // MARK: View Model Inputs & Outputs
+    //sourcery: input=Void
+    private let didLoad = PublishSubject<Void>()
     //sourcery: input=Project
     private let projectSelected = PublishSubject<Project>()
     //sourcery: output=[Project]
     private let projects = ReplaySubject<[Project]>.create(bufferSize: 1)
     //sourcery: output=Bool
     private let isLoading = RxActivityTracker()
-    //sourcery: output=Error
+    //sourcery: output=DomainError
     private let error = RxErrorTracker()
 
     // MARK: Initializer
     init(navigator: NavigatorType, getProjectsUseCase: Domain.GetAllProjectsUseCaseType) {
-        input = Input(projectSelected: projectSelected.asObserver())
+        input = Input(didLoad: didLoad.asObserver(), projectSelected: projectSelected.asObserver())
         output = Output(
             projects: projects.asDriver(onErrorJustReturn: []),
             isLoading: isLoading.asDriver(),
@@ -33,15 +35,17 @@ struct ProjectIndexViewModel: RxViewModel {
 
         self.navigator = navigator
         self.getProjectsUseCase = getProjectsUseCase
+
         observe()
     }
 
     // MARK: Methods
     private func observe() {
-        bag << getProjectsUseCase.execute().asObservable()
-            .track(activity: isLoading)
-            .track(error: error)
-            .subscribe(onNext: projects.onNext)
+        bag << didLoad.flatMapLatest { [getProjectsUseCase, error, isLoading] _ in
+            getProjectsUseCase.execute().asObservable()
+                .track(activity: isLoading)
+                .track(error: error)
+        }.subscribe(onNext: projects.onNext)
 
         bag << projectSelected.subscribe(onNext: { [navigator] (project) in
             navigator.present("tw://project/\(project.id)", context: project)
