@@ -18,7 +18,6 @@ echo "⬇️  Installing and/or updating carthage";
 echo "--------------------";
 brew install lvillani/tap/carthage-copy-frameworks
 install_or_upgrade carthage
-carthage bootstrap --platform iOS --cache-builds --no-use-binaries
 
 echo "--------------------";
 echo "⬇️  Installing SwiftLint";
