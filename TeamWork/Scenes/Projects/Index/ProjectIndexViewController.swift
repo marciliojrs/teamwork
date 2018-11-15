@@ -40,6 +40,7 @@ final class ProjectIndexViewController: BaseViewController<ProjectIndexViewModel
     }
 
     override func layoutLoad() {
+        viewModel.input.didLoad.on(.next(()))
         adapter.attach(listView: tableView)
         bag << [
             viewModel.output.projects.drive(adapter.rx.updateItems),

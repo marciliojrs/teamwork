@@ -22,6 +22,15 @@
 		92D9EB70CC8B60C1C361455C /* Pods_TeamWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915B91E00684A74974793850 /* Pods_TeamWork.framework */; };
 		A545FB3D060BC8CAAA6FFB49 /* Pods_TeamworkAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7503D0682BC8516002BDDDB /* Pods_TeamworkAPI.framework */; };
 		AD271E71219C9A05001F875B /* NVActivityIndicatorView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD271E70219C9A05001F875B /* NVActivityIndicatorView+Layout.swift */; };
+		AD271E83219CDEE7001F875B /* Tests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD271E82219CDEE7001F875B /* Tests-Info.plist */; };
+		AD271E85219CE1FB001F875B /* ProjectIndexViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD271E84219CE1FB001F875B /* ProjectIndexViewModelSpec.swift */; };
+		AD271E86219CE214001F875B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDD2063F70B0073BE60 /* Nimble.framework */; };
+		AD271E87219CE214001F875B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDE2063F70B0073BE60 /* Quick.framework */; };
+		AD271E88219CE214001F875B /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBED92063F70A0073BE60 /* RxBlocking.framework */; };
+		AD271E89219CE214001F875B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDB2063F70B0073BE60 /* RxSwift.framework */; };
+		AD271E8A219CE214001F875B /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FBEDC2063F70B0073BE60 /* RxTest.framework */; };
+		AD271E8C219CE828001F875B /* NavigatorTypeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD271E8B219CE828001F875B /* NavigatorTypeMock.swift */; };
+		AD271E8D219DA63F001F875B /* TestScheduler+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEBEC2198AD4B0068E309 /* TestScheduler+Util.swift */; };
 		AD3CEB4F219864DF0068E309 /* BaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEB4A219864DF0068E309 /* BaseAdapter.swift */; };
 		AD3CEB50219864DF0068E309 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEB4B219864DF0068E309 /* BaseViewController.swift */; };
 		AD3CEB51219864DF0068E309 /* LayoutLoading+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CEB4C219864DF0068E309 /* LayoutLoading+Constants.swift */; };
@@ -131,6 +140,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AD271E7B219CDE3B001F875B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 107450CC8B312560A7EDF284 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 063568DE4120806752E029C8;
+			remoteInfo = TeamWork;
+		};
 		AD3CEBD42198A5680068E309 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 107450CC8B312560A7EDF284 /* Project object */;
@@ -200,6 +216,10 @@
 		915B91E00684A74974793850 /* Pods_TeamWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D62DDDD5686D82CF43957AB /* Pods_Domain_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD271E70219C9A05001F875B /* NVActivityIndicatorView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NVActivityIndicatorView+Layout.swift"; sourceTree = "<group>"; };
+		AD271E76219CDE3B001F875B /* TeamWorkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamWorkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD271E82219CDEE7001F875B /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		AD271E84219CE1FB001F875B /* ProjectIndexViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIndexViewModelSpec.swift; sourceTree = "<group>"; };
+		AD271E8B219CE828001F875B /* NavigatorTypeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorTypeMock.swift; sourceTree = "<group>"; };
 		AD3CEB4A219864DF0068E309 /* BaseAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAdapter.swift; sourceTree = "<group>"; };
 		AD3CEB4B219864DF0068E309 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AD3CEB4C219864DF0068E309 /* LayoutLoading+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LayoutLoading+Constants.swift"; sourceTree = "<group>"; };
@@ -316,6 +336,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AD271E73219CDE3B001F875B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD271E89219CE214001F875B /* RxSwift.framework in Frameworks */,
+				AD271E87219CE214001F875B /* Quick.framework in Frameworks */,
+				AD271E86219CE214001F875B /* Nimble.framework in Frameworks */,
+				AD271E8A219CE214001F875B /* RxTest.framework in Frameworks */,
+				AD271E88219CE214001F875B /* RxBlocking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AD3CEBCB2198A5680068E309 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -408,6 +440,7 @@
 				AD3CEBC32198A07D0068E309 /* Environment */,
 				4758D6CDA02066D6387AD4DB /* main.swift */,
 				D99DA9AC3BBCA9C99AA110EA /* Info.plist */,
+				AD271E82219CDEE7001F875B /* Tests-Info.plist */,
 				AD3CEBA4219875C20068E309 /* Localizable.strings */,
 			);
 			path = "Supporting Files";
@@ -653,6 +686,7 @@
 			isa = PBXGroup;
 			children = (
 				AD3CEBEC2198AD4B0068E309 /* TestScheduler+Util.swift */,
+				AD271E8B219CE828001F875B /* NavigatorTypeMock.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -778,6 +812,7 @@
 			isa = PBXGroup;
 			children = (
 				AD7A44822198FDF300331678 /* ProjectIndexViewModel.swift */,
+				AD271E84219CE1FB001F875B /* ProjectIndexViewModelSpec.swift */,
 				AD7A44842198FDFF00331678 /* ProjectIndexViewController.swift */,
 				AD7A44862198FE1400331678 /* ProjectIndexView.xml */,
 				AD7A44882198FE7E00331678 /* ProjectListAdapter.swift */,
@@ -925,6 +960,7 @@
 				ADF3D76D2066E7F000737769 /* Domain.framework */,
 				AD3CEBCE2198A5680068E309 /* DomainTests.xctest */,
 				AD3CEBF72198B4AB0068E309 /* TeamworkAPI.framework */,
+				AD271E76219CDE3B001F875B /* TeamWorkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -976,6 +1012,25 @@
 			productName = TeamWork;
 			productReference = 8836BA0CB6FA463EF9CC22A3 /* TeamWork.app */;
 			productType = "com.apple.product-type.application";
+		};
+		AD271E75219CDE3B001F875B /* TeamWorkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD271E7F219CDE3C001F875B /* Build configuration list for PBXNativeTarget "TeamWorkTests" */;
+			buildPhases = (
+				AD271E72219CDE3B001F875B /* Sources */,
+				AD271E73219CDE3B001F875B /* Frameworks */,
+				AD271E74219CDE3B001F875B /* Resources */,
+				AD271E8E219DA7FF001F875B /* [Carthage] Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD271E7C219CDE3B001F875B /* PBXTargetDependency */,
+			);
+			name = TeamWorkTests;
+			productName = TeamWorkTests;
+			productReference = AD271E76219CDE3B001F875B /* TeamWorkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		AD3CEBCD2198A5680068E309 /* DomainTests */ = {
 			isa = PBXNativeTarget;
@@ -1051,6 +1106,12 @@
 					063568DE4120806752E029C8 = {
 						DevelopmentTeam = JE23YQ4BF5;
 					};
+					AD271E75219CDE3B001F875B = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 063568DE4120806752E029C8;
+					};
 					AD3CEBCD2198A5680068E309 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
@@ -1081,6 +1142,7 @@
 			projectRoot = "";
 			targets = (
 				063568DE4120806752E029C8 /* TeamWork */,
+				AD271E75219CDE3B001F875B /* TeamWorkTests */,
 				ADF3D76C2066E7F000737769 /* Domain */,
 				AD3CEBCD2198A5680068E309 /* DomainTests */,
 				AD3CEBF62198B4AB0068E309 /* TeamworkAPI */,
@@ -1097,11 +1159,19 @@
 				AD7A44872198FE1400331678 /* ProjectIndexView.xml in Resources */,
 				AD7A44962199A44B00331678 /* ProjectDetailView.xml in Resources */,
 				AD3CEBA5219875C20068E309 /* Localizable.strings in Resources */,
+				AD271E83219CDEE7001F875B /* Tests-Info.plist in Resources */,
 				AD4FBED82063F5990073BE60 /* AutoCodable.stencil in Resources */,
 				8E21C3977D6EF1C9C22A792A /* Assets.xcassets in Resources */,
 				AD7A448D2198FF3600331678 /* ProjectIndexItemCell.xml in Resources */,
 				749CAA5521462D74995546CF /* Settings.bundle in Resources */,
 				AD7A447F2198FD4400331678 /* RxViewModel.stencil in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD271E74219CDE3B001F875B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1213,6 +1283,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TeamWork/Pods-TeamWork-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		AD271E8E219DA7FF001F875B /* [Carthage] Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Carthage] Copy Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage-copy-frameworks\n";
 		};
 		AD3CEBE12198A6A30068E309 /* [Carthage] Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1366,6 +1454,7 @@
 				AD3CEB9021986B130068E309 /* PlistItem.swift in Sources */,
 				AD3CEB52219864DF0068E309 /* ResourceFile.swift in Sources */,
 				AD7A44922199A40900331678 /* ProjectDetailViewController.swift in Sources */,
+				AD271E8C219CE828001F875B /* NavigatorTypeMock.swift in Sources */,
 				AD3CEB5B2198659A0068E309 /* TranparentNavigationController.swift in Sources */,
 				AD3CEB5A2198659A0068E309 /* InternalNavigationController.swift in Sources */,
 				AD7A44892198FE7E00331678 /* ProjectListAdapter.swift in Sources */,
@@ -1390,6 +1479,15 @@
 				AD3CEBA1219874280068E309 /* UIViewController+Modal.swift in Sources */,
 				1223D22EB14D8DFC14F48553 /* DisposeBagOperator.swift in Sources */,
 				ADD0F46C2104E7AC0044DCBE /* RxErrorTracker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD271E72219CDE3B001F875B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD271E85219CE1FB001F875B /* ProjectIndexViewModelSpec.swift in Sources */,
+				AD271E8D219DA63F001F875B /* TestScheduler+Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1449,6 +1547,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		AD271E7C219CDE3B001F875B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 063568DE4120806752E029C8 /* TeamWork */;
+			targetProxy = AD271E7B219CDE3B001F875B /* PBXContainerItemProxy */;
+		};
 		AD3CEBD52198A5680068E309 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = ADF3D76C2066E7F000737769 /* Domain */;
@@ -1569,6 +1672,58 @@
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
+		};
+		AD271E7D219CDE3B001F875B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				INFOPLIST_FILE = "TeamWork/Supporting Files/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teamwork.TeamWorkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeamWork.app/TeamWork";
+			};
+			name = Debug;
+		};
+		AD271E7E219CDE3B001F875B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				INFOPLIST_FILE = "TeamWork/Supporting Files/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teamwork.TeamWorkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeamWork.app/TeamWork";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		AD3CEBD72198A5680068E309 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1860,6 +2015,15 @@
 			buildConfigurations = (
 				7358610E197EF4B2B137CA40 /* Debug */,
 				B44FE0D4C189396D5542BBBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD271E7F219CDE3C001F875B /* Build configuration list for PBXNativeTarget "TeamWorkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD271E7D219CDE3B001F875B /* Debug */,
+				AD271E7E219CDE3B001F875B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

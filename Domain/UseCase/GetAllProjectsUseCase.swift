@@ -1,7 +1,7 @@
 import RxSwift
 
 /// Retrieve all projects
-public protocol GetAllProjectsUseCaseType: UseCase {
+public protocol GetAllProjectsUseCaseType: UseCase, AutoMockable {
     /**
      - returns: Array with all projects.
     */
