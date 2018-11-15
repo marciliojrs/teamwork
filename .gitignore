@@ -26,7 +26,9 @@ build/
 
 # Dependencies
 Pods
-Carthage
+Carthage/Checkouts
+Carthage/Build/iOS/*.dSYM
+Carthage/Build/iOS/*.bcsymbolmap
 
 # AppCode specific files
 .idea/

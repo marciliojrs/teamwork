@@ -2,15 +2,8 @@ fastlane_version '2.102.0'
 default_platform :ios
 
 platform :ios do
-  def check_environment
-    unless ENV.key?('CERTIFICATES_URL')
-      UI.user_error!('🚨 Environment not set. Use "--env [name]". Exiting 👋')
-    end
-  end
-
   desc "Run unit tests for all schemes"
   lane :tests do
-    check_environment
     swiftlint(strict: false)
 
     run_tests(
