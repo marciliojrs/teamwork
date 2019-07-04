@@ -1,8 +1,8 @@
 import Foundation
 import RxSwift
 
-extension ObservableType where E: DomainConvertibleType {
-    func mapToDomain() -> Observable<E.DomainType> {
+extension ObservableType where Element: DomainConvertibleType {
+    func mapToDomain() -> Observable<Element.DomainType> {
         return self.map { $0.asDomain() }
     }
 }

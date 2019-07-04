@@ -26,7 +26,8 @@ class GetProjectByIdUseCaseSpec: QuickSpec {
                 }
 
                 it("should emit a validation error") {
-                    XCTAssertEqual(result.events, [error(0, DomainError.validation(["id": "id cannot be empty"]))])
+                    XCTAssertEqual(result.events,
+                                   [Recorded.error(0, DomainError.validation(["id": "id cannot be empty"]))])
                 }
             }
 
@@ -38,7 +39,7 @@ class GetProjectByIdUseCaseSpec: QuickSpec {
                 }
 
                 it("should emit a single event with a valid project") {
-                    XCTAssertEqual(result.events, [next(0, retrieveResponse), completed(0)])
+                    XCTAssertEqual(result.events, [Recorded.next(0, retrieveResponse), Recorded.completed(0)])
                 }
             }
 
@@ -49,7 +50,7 @@ class GetProjectByIdUseCaseSpec: QuickSpec {
                 }
 
                 it("should emit an error") {
-                    XCTAssertEqual(result.events, [error(0, DomainError.unknown)])
+                    XCTAssertEqual(result.events, [Recorded.error(0, DomainError.unknown)])
                 }
             }
         }

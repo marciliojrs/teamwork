@@ -1,6 +1,6 @@
 import RxSwift
 
-extension ObservableType where Self.E == Data {
+extension ObservableType where Self.Element == Data {
     func transform<T: DomainConvertibleCoding>(to: T.Type, keypath: String? = nil) -> Observable<T> {
         return map { (data) in
             var data = data

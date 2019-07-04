@@ -49,3 +49,4 @@ Logs/
 *.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
 
 fastlane/README.md
+Carthage

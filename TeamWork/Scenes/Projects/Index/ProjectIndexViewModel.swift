@@ -29,7 +29,7 @@ struct ProjectIndexViewModel: RxViewModel {
         input = Input(didLoad: didLoad.asObserver(), projectSelected: projectSelected.asObserver())
         output = Output(
             projects: projects.asDriver(onErrorJustReturn: []),
-            isLoading: isLoading.asDriver(),
+            isLoading: isLoading.asDriver(onErrorJustReturn: false),
             error: error.asDriver()
         )
 

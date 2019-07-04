@@ -28,7 +28,7 @@ class GetAllProjectsUseCaseSpec: QuickSpec {
                 }
 
                 it("should emit a single event with a valid projects list") {
-                    XCTAssertEqual(result.events, [next(0, retrieveResponse), completed(0)])
+                    XCTAssertEqual(result.events, [Recorded.next(0, retrieveResponse), Recorded.completed(0)])
                 }
             }
             context("when repository returns an invalid response") {
@@ -38,7 +38,7 @@ class GetAllProjectsUseCaseSpec: QuickSpec {
                 }
 
                 it("should emit an error") {
-                    XCTAssertEqual(result.events, [error(0, DomainError.unknown)])
+                    XCTAssertEqual(result.events, [Recorded.error(0, DomainError.unknown)])
                 }
             }
         }

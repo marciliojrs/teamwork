@@ -6,7 +6,7 @@ struct RxErrorTracker: SharedSequenceConvertibleType {
     typealias SharingStrategy = DriverSharingStrategy
     private let subject = ReplaySubject<DomainError>.create(bufferSize: 1)
 
-    func trackError<O: ObservableConvertibleType>(from source: O) -> Observable<O.E> {
+    func trackError<O: ObservableConvertibleType>(from source: O) -> Observable<O.Element> {
         return source.asObservable().do(onError: onError)
     }
 
@@ -25,7 +25,7 @@ struct RxErrorTracker: SharedSequenceConvertibleType {
 }
 
 extension ObservableConvertibleType {
-    func track(error errorTracker: RxErrorTracker) -> Observable<E> {
+    func track(error errorTracker: RxErrorTracker) -> Observable<Element> {
         return errorTracker.trackError(from: self)
     }
 }

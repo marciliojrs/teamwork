@@ -33,7 +33,7 @@ class ProjectIndexViewModelSpec: QuickSpec {
 
                     it("viewModel.output.projects should emit use case response") {
                         let observer = scheduler.record(viewModel.output.projects)
-                        XCTAssertEqual(observer.events, [next(0, projectsArray)])
+                        XCTAssertEqual(observer.events, [Recorded.next(0, projectsArray)])
                     }
 
                     it("viewModel.input.projectSelected should navigate to ProjectDetail") {
@@ -56,7 +56,7 @@ class ProjectIndexViewModelSpec: QuickSpec {
 
                     it("viewModel.output.error should emit the error") {
                         let observer = scheduler.record(viewModel.output.error)
-                        let expected: [Recorded<Event<DomainError>>] = [next(0, DomainError.unknown)]
+                        let expected: [Recorded<Event<DomainError>>] = [Recorded.next(0, DomainError.unknown)]
                         XCTAssertEqual(observer.events, expected)
                     }
                 }

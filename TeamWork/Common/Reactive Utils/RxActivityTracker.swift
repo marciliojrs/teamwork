@@ -1,50 +1,51 @@
 import RxSwift
 import RxCocoa
 
-struct RxActivityTracker: SharedSequenceConvertibleType {
-    //swiftlint:disable:next type_name
-    public typealias E = Bool
-    public typealias SharingStrategy = DriverSharingStrategy
+struct RxActivityTracker {
 
-    private let _lock = NSRecursiveLock()
-    private let _variable = Variable(false)
-    private let _loading: SharedSequence<SharingStrategy, Bool>
+    public typealias Element = Bool
+
+    fileprivate let isLoading = BehaviorRelay(value: false)
+    fileprivate let loading: Observable<RxActivityTracker.Element>
 
     public init() {
-        _loading = _variable.asDriver()
-                .distinctUntilChanged()
+        // Observe occurs in main thread
+        loading = isLoading.asObservable()
+            .skip(1)
+            .observeOn(MainScheduler.instance)
+            .distinctUntilChanged()
     }
 
-    fileprivate func trackActivityOfObservable<O: ObservableConvertibleType>(_ source: O) -> Observable<O.E> {
+    fileprivate func trackActivityOfObservable<O: ObservableConvertibleType>(_ source: O) -> Observable<O.Element> {
         return source.asObservable()
-                .do(onNext: { _ in
-                    self.sendStopLoading()
-                }, onError: { _ in
-                    self.sendStopLoading()
-                }, onCompleted: {
-                    self.sendStopLoading()
-                }, onSubscribe: subscribed)
+            .do(onNext: { _ in self.sendStopLoading() },
+                onError: { _ in self.sendStopLoading() },
+                onCompleted: { self.sendStopLoading() },
+                onSubscribe: { self.subscribed() })
     }
 
     private func subscribed() {
-        _lock.lock()
-        _variable.value = true
-        _lock.unlock()
+        isLoading.accept(true)
     }
 
     private func sendStopLoading() {
-        _lock.lock()
-        _variable.value = false
-        _lock.unlock()
+        isLoading.accept(false)
+    }
+}
+
+extension RxActivityTracker: ObservableType {
+    public func subscribe<O>(_ observer: O) -> Disposable
+        where O: ObserverType, RxActivityTracker.Element == O.Element {
+        return loading.subscribe(observer)
     }
 
-    public func asSharedSequence() -> SharedSequence<SharingStrategy, E> {
-        return _loading
+    public func asObservable() -> Observable<RxActivityTracker.Element> {
+        return loading.asObservable()
     }
 }
 
 extension ObservableConvertibleType {
-    func track(activity activityIndicator: RxActivityTracker) -> Observable<E> {
+    func track(activity activityIndicator: RxActivityTracker) -> Observable<Element> {
         return activityIndicator.trackActivityOfObservable(self)
     }
 }

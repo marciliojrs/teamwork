@@ -1,6 +1,6 @@
-github "ReactiveX/RxSwift" ~> 4.1
-github "Quick/Quick" ~> 1.2
-github "Quick/Nimble" ~> 7.0
-github "schibsted/Layout" ~> 0.6
+github "ReactiveX/RxSwift"
+github "Quick/Quick"
+github "Quick/Nimble"
+github "schibsted/Layout"
 github "HeroTransitions/Hero"
 github "RxSwiftCommunity/RxGesture"
