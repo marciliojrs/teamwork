@@ -1,4 +1,4 @@
-# TeamWork
+# Teamwork
 This app uses Teamwork.com API to list projects.
 
 ## Getting Started
